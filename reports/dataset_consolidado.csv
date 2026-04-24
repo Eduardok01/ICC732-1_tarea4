@@ -1,0 +1,6 @@
+name,language,stargazers_count,componentes,total_vulns,critical,high,medium,low,max_cvss,code_findings,workflow_count,cicd_findings
+sedona-db,Rust,445,715,9,0,5,0,4,8.7,7,11,28
+tvm-ffi,Python,378,51,3,0,3,0,0,8.6,11,5,7
+flink-agents,Java,358,136,5,0,1,4,0,8.7,37,6,6
+arrow-js,TypeScript,95,37,0,0,0,0,0,0.0,2,3,4
+datasketches-rust,Rust,78,69,0,0,0,0,0,0.0,0,1,1

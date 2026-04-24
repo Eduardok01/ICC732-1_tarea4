@@ -1,0 +1,604 @@
+{
+  "version": "1.161.0",
+  "results": [
+    {
+      "check_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/check_rat_report.py",
+      "start": {
+        "line": 23,
+        "col": 1,
+        "offset": 847
+      },
+      "end": {
+        "line": 23,
+        "col": 35,
+        "offset": 881
+      },
+      "extra": {
+        "message": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+        "metadata": {
+          "owasp": [
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ],
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "references": [
+            "https://docs.python.org/3/library/xml.html",
+            "https://github.com/tiran/defusedxml",
+            "https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "XML Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.use-defused-xml.use-defused-xml",
+          "shortlink": "https://sg.run/kX47"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/check_rat_report.py",
+      "start": {
+        "line": 35,
+        "col": 8,
+        "offset": 1169
+      },
+      "end": {
+        "line": 35,
+        "col": 30,
+        "offset": 1191
+      },
+      "extra": {
+        "message": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+        "fix": "defusedxml.etree.ElementTree.parse(xml_filename)",
+        "metadata": {
+          "owasp": [
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ],
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "references": [
+            "https://docs.python.org/3/library/xml.html",
+            "https://github.com/tiran/defusedxml",
+            "https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "XML Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+          "shortlink": "https://sg.run/n3jG"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/arrow2csv.cjs",
+            "start": {
+              "line": 28,
+              "col": 5,
+              "offset": 0
+            },
+            "end": {
+              "line": 28,
+              "col": 14,
+              "offset": 9
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/arrow2csv.cjs:28:\n `arrow2csv` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/arrow2csv.cjs",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/arrow2csv.cjs",
+          "start": {
+            "line": 28,
+            "col": 5,
+            "offset": 0
+          },
+          "end": {
+            "line": 28,
+            "col": 14,
+            "offset": 9
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/ci/scripts/update_docs.sh",
+            "start": {
+              "line": 20,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 101,
+              "col": 6,
+              "offset": 1774
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/arrow-js/ci/scripts/update_docs.sh:20:\n `set -exu\n\nversion=\"${1}\"\ntarget_branch=\"${2}\"\n\nhtml_escape() {\n  # & -> &amp; must be the first substitution\n  sed -e \"s/&/&amp;/g\" \\\n    -e \"s/</&lt;/g\" \\\n    -e \"s/>/&gt;/g\" \\\n    -e \"s/\\\"/&quot;/g\" \\\n    -e \"s/'/&apos;/g\"\n}\n\nif ! git fetch origin \"${target_branch}\"; then\n  git worktree add --orphan -b \"${target_branch}\" site\nelse\n  git worktree add site -B \"${target_branch}\" \"origin/${target_branch}\"\nfi\n\ntar_gz=\"${PWD}/apache-arrow-js-docs-${version}.tar.gz\"\n\nextract_docs() {\n  local destination=\"${1}\"\n\n  rm -rf \"${destination}\"\n  mkdir -p \"${destination}\"\n  pushd \"${destination}\"\n  tar xf \"${tar_gz}\" --strip-components=1\n  popd\n  git add \"${destination}\"\n}\n\npushd site\nif [ \"${target_branch}\" = \"asf-site\" ]; then\n  # Update https://arrow.apache.org/js/main/\n  extract_docs main\n\n  # Create .htaccess\n  cat >.htaccess <<HTACCESS\nRedirectMatch \"^/js/$\" \"/js/current/\"\nHTACCESS\n  git add .htaccess\nelse\n  # Remove data for nonexistent branches\n  for branch in *; do\n    if [ ! -d \"${branch}\" ]; then\n      continue\n    fi\n    if ! git fetch origin \"${branch}\"; then\n      git rm -r \"${branch}\"\n    fi\n  done\n\n  # Update the pushed branch\n  extract_docs \"${GITHUB_REF_NAME}\"\n\n  # Create index.html\n  {\n    echo \"<!DOCTYPE html>\"\n    echo \"<html>\"\n    echo \"  <head>\"\n    echo \"    <title>Apache Arrow JS documents</title>\"\n    echo \"  </head>\"\n    echo \"  <body>\"\n    echo \"    <ul>\"\n    for branch in *; do\n      if [ ! -d \"${branch}\" ]; then\n        continue\n      fi\n      escaped_branch=\"$(echo \"${branch}\" | html_escape)\"\n      echo \"      <li>\"\n      echo \"        <a href=\\\"${escaped_branch}/\\\">${escaped_branch}</a>\"\n      echo \"      </li>\"\n    done\n    echo \"    </ul>\"\n    echo \"  </body>\"\n    echo \"</html>\"\n  } >index.html\n  git add index.html\nfi\npopd\n` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/ci/scripts/update_docs.sh",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/ci/scripts/update_docs.sh",
+          "start": {
+            "line": 20,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 101,
+            "col": 6,
+            "offset": 1774
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/perf/index.ts",
+            "start": {
+              "line": 57,
+              "col": 9,
+              "offset": 0
+            },
+            "end": {
+              "line": 59,
+              "col": 5,
+              "offset": 71
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/arrow-js/perf/index.ts:57:\n `(<any>result).suite = _summary.name;\n        results.push(result);\n    ` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/perf/index.ts",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/perf/index.ts",
+          "start": {
+            "line": 57,
+            "col": 9,
+            "offset": 0
+          },
+          "end": {
+            "line": 59,
+            "col": 5,
+            "offset": 71
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/Arrow.ts",
+            "start": {
+              "line": 124,
+              "col": 8,
+              "offset": 0
+            },
+            "end": {
+              "line": 124,
+              "col": 12,
+              "offset": 4
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/arrow-js/src/Arrow.ts:124:\n `type` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/Arrow.ts",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/Arrow.ts",
+          "start": {
+            "line": 124,
+            "col": 8,
+            "offset": 0
+          },
+          "end": {
+            "line": 124,
+            "col": 12,
+            "offset": 4
+          }
+        }
+      ]
+    }
+  ],
+  "paths": {
+    "scanned": [
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.asf.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.dockerallow",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.editorconfig",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.env",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/ISSUE_TEMPLATE/bug_report.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/ISSUE_TEMPLATE/config.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/ISSUE_TEMPLATE/feature_request.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/ISSUE_TEMPLATE/usage_question.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/dependabot.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/patches/enable-binaryview-integration-tests.patch",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/pull_request_template.md",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/workflows/rc.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/workflows/release.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.github/workflows/test.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.gitignore",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.npmrc",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.pre-commit-config.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.shellcheckrc",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.vscode/extensions.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.vscode/launch.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/.vscode/settings.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/CODE_OF_CONDUCT.md",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/CONTRIBUTING.md",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/DEVELOP.md",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/LICENSE.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/NOTICE.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/arrow2csv.cjs",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/file-to-stream.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/integration.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/json-to-arrow.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/print-buffer-alignment.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/bin/stream-to-file.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/ci/scripts/build.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/ci/scripts/test.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/ci/scripts/update_docs.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/compose.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/.env.example",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/check_rat_report.py",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/docs.md",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/rat_exclude_files.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/release.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/release_rc.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/run_rat.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/verify_rc.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/eslint.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/examples/read_file.html",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/argv.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/arrow-task.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/bundle-task.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/clean-task.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/closure-task.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/compile-task.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/esm-require.cjs",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/memoize-task.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/package-task.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/test-task.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/typescript-task.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulp/util.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/gulpfile.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/index.cjs",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/index.mjs",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/index.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jest.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.apache-arrow.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.coverage.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.es2015.cjs.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.es2015.esm.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.es2015.umd.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.es5.cjs.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.es5.esm.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.es5.umd.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.esnext.cjs.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.esnext.esm.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.esnext.umd.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.src.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/jestconfigs/jest.ts.config.js",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/package-lock.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/package.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/perf/config.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/perf/index.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/scripts/update_flatbuffers.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/Arrow.dom.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/Arrow.node.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/Arrow.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/bin/arrow2csv.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/binary.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/binaryview.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/bool.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/buffer.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/date.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/decimal.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/dictionary.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/duration.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/fixedsizebinary.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/fixedsizelist.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/float.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/int.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/interval.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/largebinary.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/largeutf8.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/list.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/map.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/null.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/struct.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/time.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/timestamp.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/union.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/utf8.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/utf8view.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder/valid.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/builder.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/data.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/enum.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/factories.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/File.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/File_generated.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/Message_generated.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/Schema_generated.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/SparseTensor_generated.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/Tensor_generated.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/binary-view.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/binary.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/block.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/body-compression-method.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/body-compression.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/bool.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/buffer.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/compression-type.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/date-unit.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/date.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/decimal.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/dictionary-batch.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/dictionary-encoding.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/dictionary-kind.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/duration.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/endianness.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/feature.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/field-node.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/field.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/fixed-size-binary.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/fixed-size-list.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/floating-point.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/footer.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/int.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/interval-unit.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/interval.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/key-value.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/large-binary.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/large-list-view.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/large-list.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/large-utf8.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/list-view.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/list.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/map.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/message-header.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/message.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/metadata-version.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/null.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/precision.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/record-batch.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/run-end-encoded.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/schema.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/sparse-matrix-compressed-axis.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/sparse-matrix-index-csx.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/sparse-tensor-index-coo.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/sparse-tensor-index-csf.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/sparse-tensor-index.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/sparse-tensor.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/struct-.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/tensor-dim.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/tensor.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/time-unit.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/time.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/timestamp.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/type.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/union-mode.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/union.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/utf8-view.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/fb/utf8.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/interfaces.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/adapters.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/file.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/interfaces.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/node/builder.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/node/iterable.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/node/reader.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/node/writer.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/stream.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/whatwg/builder.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/whatwg/iterable.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/whatwg/reader.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/io/whatwg/writer.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/compression/constants.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/compression/registry.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/compression/validators.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/message.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/metadata/file.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/metadata/json.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/metadata/message.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/reader.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/serialization.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/ipc/writer.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/recordbatch.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/row/map.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/row/struct.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/schema.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/table.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/type.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/bigint.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/bit.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/bn.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/buffer.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/chunk.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/compat.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/int.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/interval.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/json.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/math.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/pretty.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/recordbatch.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/typecheck.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/utf8.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/util/vector.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/vector.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/builderctor.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/get.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/indexof.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/iterator.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/jsontypeassembler.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/jsonvectorassembler.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/set.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/typeassembler.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/typecomparator.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/typector.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/vectorassembler.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor/vectorloader.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/src/visitor.ts",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.base.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.bin.cjs.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.docs.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.es2015.cjs.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.es2015.cls.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.es2015.esm.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.es5.cjs.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.es5.cls.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.es5.esm.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.esnext.cjs.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.esnext.cls.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig/tsconfig.esnext.esm.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/tsconfig.json",
+      "/tmp/semgrep_clones_8jd6v0ny/arrow-js/typedoc.json"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 0.9850070476531982,
+    "profiling_times": {
+      "config_time": 2.645458936691284,
+      "core_time": 4.761507034301758,
+      "ignores_time": 0.0014119148254394531,
+      "total_time": 7.425548791885376
+    },
+    "parsing_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 7.772912502288818,
+      "per_file_time": {
+        "mean": 0.010391594254396817,
+        "std_dev": 0.00095944669927528
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0,
+      "per_file_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.9826187717265353,
+      "rules_selected_ratio": 0.0281720741599073,
+      "rules_matched_ratio": 0.0281720741599073
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 1331175680
+  },
+  "engine_requested": "OSS",
+  "skipped_rules": [],
+  "profiling_results": []
+}
