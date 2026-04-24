@@ -28,7 +28,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY scripts/ ./scripts/
 
 # Crear carpetas de salida (notebooks se monta como volumen desde el host)
-RUN mkdir -p notebooks reports sboms reports/grype_raw
+RUN mkdir -p notebooks reports sboms reports/grype_raw reports/semgrep_raw
 
 # Puerto para Jupyter
 EXPOSE 8888
