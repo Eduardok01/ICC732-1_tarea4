@@ -1,0 +1,37 @@
+services:
+
+  # ── Servicio principal: ejecutar el pipeline ────────────────────────────────
+  pipeline:
+    build: .
+    container_name: sbom-pipeline
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    volumes:
+      # Los resultados se guardan en tu máquina, fuera del contenedor
+      - ./reports:/app/reports
+      - ./sboms:/app/sboms
+    # Por defecto abre bash para que corras los scripts manualmente
+    stdin_open: true
+    tty: true
+
+  # ── Servicio Jupyter: ver el notebook con los resultados ───────────────────
+  jupyter:
+    build: .
+    container_name: sbom-jupyter
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    volumes:
+      - ./reports:/app/reports
+      - ./sboms:/app/sboms
+      - ./notebooks:/app/notebooks
+    ports:
+      - "8888:8888"
+    command: >
+      jupyter notebook
+        --ip=0.0.0.0
+        --port=8888
+        --no-browser
+        --allow-root
+        --NotebookApp.token=''
+        --NotebookApp.password=''
+        --notebook-dir=/app/notebooks
