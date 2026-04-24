@@ -1,23 +1,60 @@
 {
-  "generated_at": "2026-04-24T03:01:57.002941+00:00",
+  "generated_at": "2026-04-24T16:14:52.159456+00:00",
   "sboms": [
     {
-      "repo": "werkzeug",
-      "sbom_path": "/app/sboms/werkzeug.cdx.json",
-      "component_count": 101,
-      "ecosystems": {},
-      "skipped": true
+      "repo": "sedona-db",
+      "sbom_path": "/app/sboms/sedona-db.cdx.json",
+      "component_count": 715,
+      "ecosystems": {
+        "github": 42,
+        "cargo": 658,
+        "cran": 1,
+        "unknown": 14
+      },
+      "generated_at": "2026-04-24T16:14:36.715598+00:00"
     },
     {
-      "repo": "click",
-      "sbom_path": "/app/sboms/click.cdx.json",
-      "component_count": 104,
+      "repo": "tvm-ffi",
+      "sbom_path": "/app/sboms/tvm-ffi.cdx.json",
+      "component_count": 51,
       "ecosystems": {
-        "github": 17,
-        "pypi": 81,
-        "unknown": 6
+        "unknown": 18,
+        "github": 33
       },
-      "generated_at": "2026-04-24T03:01:56.990901+00:00"
+      "generated_at": "2026-04-24T16:14:40.175242+00:00"
+    },
+    {
+      "repo": "flink-agents",
+      "sbom_path": "/app/sboms/flink-agents.cdx.json",
+      "component_count": 136,
+      "ecosystems": {
+        "github": 13,
+        "maven": 88,
+        "unknown": 35
+      },
+      "generated_at": "2026-04-24T16:14:45.216457+00:00"
+    },
+    {
+      "repo": "arrow-js",
+      "sbom_path": "/app/sboms/arrow-js.cdx.json",
+      "component_count": 37,
+      "ecosystems": {
+        "npm": 24,
+        "github": 9,
+        "unknown": 4
+      },
+      "generated_at": "2026-04-24T16:14:48.876889+00:00"
+    },
+    {
+      "repo": "datasketches-rust",
+      "sbom_path": "/app/sboms/datasketches-rust.cdx.json",
+      "component_count": 69,
+      "ecosystems": {
+        "github": 4,
+        "cargo": 63,
+        "unknown": 2
+      },
+      "generated_at": "2026-04-24T16:14:52.136655+00:00"
     }
   ]
 }

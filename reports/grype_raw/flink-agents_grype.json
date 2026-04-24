@@ -1,0 +1,1133 @@
+{
+  "matches": [
+    {
+      "vulnerability": {
+        "id": "GHSA-445c-vh5m-36rj",
+        "dataSource": "https://github.com/advisories/GHSA-445c-vh5m-36rj",
+        "namespace": "github:language:java",
+        "severity": "Medium",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2026-34478",
+          "https://github.com/apache/logging-log4j2/pull/4074",
+          "https://lists.apache.org/thread/3k1clr2l6vkdnl4cbhjrnt1nyjvb5gwt",
+          "https://logging.apache.org/cyclonedx/vdr.xml",
+          "https://logging.apache.org/log4j/2.x/manual/layouts.html#RFC5424Layout",
+          "https://logging.apache.org/security.html#CVE-2026-34478",
+          "http://www.openwall.com/lists/oss-security/2026/04/10/7"
+        ],
+        "description": "Apache Log4j Core: log injection in `Rfc5424Layout` due to silent configuration incompatibility",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "4.0",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N",
+            "metrics": {
+              "baseScore": 6.9
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "epss": [
+          {
+            "cve": "CVE-2026-34478",
+            "epss": 0.00191,
+            "percentile": 0.41008,
+            "date": "2026-04-23"
+          }
+        ],
+        "cwes": [
+          {
+            "cve": "CVE-2026-34478",
+            "cwe": "CWE-117",
+            "source": "security@apache.org",
+            "type": "Secondary"
+          },
+          {
+            "cve": "CVE-2026-34478",
+            "cwe": "CWE-684",
+            "source": "security@apache.org",
+            "type": "Secondary"
+          }
+        ],
+        "fix": {
+          "versions": [
+            "2.25.4"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "2.25.4",
+              "date": "2026-04-14",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0.113645
+      },
+      "relatedVulnerabilities": [
+        {
+          "id": "CVE-2026-34478",
+          "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2026-34478",
+          "namespace": "nvd:cpe",
+          "severity": "Medium",
+          "urls": [
+            "https://github.com/apache/logging-log4j2/pull/4074",
+            "https://lists.apache.org/thread/3k1clr2l6vkdnl4cbhjrnt1nyjvb5gwt",
+            "https://logging.apache.org/cyclonedx/vdr.xml",
+            "https://logging.apache.org/log4j/2.x/manual/layouts.html#RFC5424Layout",
+            "https://logging.apache.org/security.html#CVE-2026-34478",
+            "http://www.openwall.com/lists/oss-security/2026/04/10/7"
+          ],
+          "description": "Apache Log4j Core's  Rfc5424Layout https://logging.apache.org/log4j/2.x/manual/layouts.html#RFC5424Layout , in versions 2.21.0 through 2.25.3, is vulnerable to log injection via CRLF sequences due to undocumented renames of security-relevant configuration attributes.\n\nTwo distinct issues affect users of stream-based syslog services who configure Rfc5424Layout directly:\n\n  *  The newLineEscape attribute was silently renamed, causing newline escaping to stop working for users of TCP framing (RFC 6587), exposing them to CRLF injection in log output.\n  *  The useTlsMessageFormat attribute was silently renamed, causing users of TLS framing (RFC 5425) to be silently downgraded to unframed TCP (RFC 6587), without newline escaping.\n\n\nUsers of the SyslogAppender are not affected, as its configuration attributes were not modified.\n\nUsers are advised to upgrade to Apache Log4j Core 2.25.4, which corrects this issue.",
+          "cvss": [
+            {
+              "source": "security@apache.org",
+              "type": "Secondary",
+              "version": "4.0",
+              "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+              "metrics": {
+                "baseScore": 6.9
+              },
+              "vendorMetadata": {}
+            }
+          ],
+          "epss": [
+            {
+              "cve": "CVE-2026-34478",
+              "epss": 0.00191,
+              "percentile": 0.41008,
+              "date": "2026-04-23"
+            }
+          ],
+          "cwes": [
+            {
+              "cve": "CVE-2026-34478",
+              "cwe": "CWE-117",
+              "source": "security@apache.org",
+              "type": "Secondary"
+            },
+            {
+              "cve": "CVE-2026-34478",
+              "cwe": "CWE-684",
+              "source": "security@apache.org",
+              "type": "Secondary"
+            }
+          ]
+        }
+      ],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "java-matcher",
+          "searchedBy": {
+            "language": "java",
+            "namespace": "github:language:java",
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "version": "2.23.1"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-445c-vh5m-36rj",
+            "versionConstraint": ">=2.21.0,<2.25.4 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "2.25.4"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:maven/org.apache.logging.log4j/log4j-core@2.23.1?package-id=7a1eb5789960165a",
+        "name": "log4j-core",
+        "version": "2.23.1",
+        "type": "java-archive",
+        "locations": [
+          {
+            "path": "/dist/flink-1.20/pom.xml",
+            "accessPath": ""
+          }
+        ],
+        "language": "java",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:apache:log4j-core:2.23.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:log4j_core:2.23.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:log4j:2.23.1:*:*:*:*:*:*:*"
+        ],
+        "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.23.1",
+        "upstreams": [],
+        "metadataType": "JavaMetadata",
+        "metadata": {
+          "virtualPath": "",
+          "pomArtifactID": "log4j-core",
+          "pomGroupID": "org.apache.logging.log4j",
+          "manifestName": "",
+          "archiveDigests": null
+        }
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-3pxv-7cmr-fjr4",
+        "dataSource": "https://github.com/advisories/GHSA-3pxv-7cmr-fjr4",
+        "namespace": "github:language:java",
+        "severity": "Medium",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2026-34480",
+          "https://github.com/apache/logging-log4j2/pull/4077",
+          "https://lists.apache.org/thread/5x0hcnng0chhghp6jgjdp3qmbbhfjzhb",
+          "https://logging.apache.org/cyclonedx/vdr.xml",
+          "https://logging.apache.org/log4j/2.x/manual/layouts.html#XmlLayout",
+          "https://logging.apache.org/security.html#CVE-2026-34480",
+          "http://www.openwall.com/lists/oss-security/2026/04/10/9"
+        ],
+        "description": "Apache Log4j Core: Silent log event loss in XmlLayout due to unescaped XML 1.0 forbidden characters",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "4.0",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N",
+            "metrics": {
+              "baseScore": 6.9
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "epss": [
+          {
+            "cve": "CVE-2026-34480",
+            "epss": 0.00157,
+            "percentile": 0.36472,
+            "date": "2026-04-23"
+          }
+        ],
+        "cwes": [
+          {
+            "cve": "CVE-2026-34480",
+            "cwe": "CWE-116",
+            "source": "security@apache.org",
+            "type": "Secondary"
+          }
+        ],
+        "fix": {
+          "versions": [
+            "2.25.4"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "2.25.4",
+              "date": "2026-04-11",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0.093415
+      },
+      "relatedVulnerabilities": [
+        {
+          "id": "CVE-2026-34480",
+          "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2026-34480",
+          "namespace": "nvd:cpe",
+          "severity": "Medium",
+          "urls": [
+            "https://github.com/apache/logging-log4j2/pull/4077",
+            "https://lists.apache.org/thread/5x0hcnng0chhghp6jgjdp3qmbbhfjzhb",
+            "https://logging.apache.org/cyclonedx/vdr.xml",
+            "https://logging.apache.org/log4j/2.x/manual/layouts.html#XmlLayout",
+            "https://logging.apache.org/security.html#CVE-2026-34480",
+            "http://www.openwall.com/lists/oss-security/2026/04/10/9"
+          ],
+          "description": "Apache Log4j Core's  XmlLayout https://logging.apache.org/log4j/2.x/manual/layouts.html#XmlLayout , in versions up to and including 2.25.3, fails to sanitize characters forbidden by the  XML 1.0 specification https://www.w3.org/TR/xml/#charsets  producing invalid XML output whenever a log message or MDC value contains such characters.\n\nThe impact depends on the StAX implementation in use:\n\n  *  JRE built-in StAX: Forbidden characters are silently written to the output, producing malformed XML. Conforming parsers must reject such documents with a fatal error, which may cause downstream log-processing systems to drop the affected records.\n  *  Alternative StAX implementations (e.g.,  Woodstox https://github.com/FasterXML/woodstox , a transitive dependency of the Jackson XML Dataformat module): An exception is thrown during the logging call, and the log event is never delivered to its intended appender, only to Log4j's internal status logger.\n\n\nUsers are advised to upgrade to Apache Log4j Core 2.25.4, which corrects this issue by sanitizing forbidden characters before XML output.",
+          "cvss": [
+            {
+              "source": "security@apache.org",
+              "type": "Secondary",
+              "version": "4.0",
+              "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+              "metrics": {
+                "baseScore": 6.9
+              },
+              "vendorMetadata": {}
+            }
+          ],
+          "epss": [
+            {
+              "cve": "CVE-2026-34480",
+              "epss": 0.00157,
+              "percentile": 0.36472,
+              "date": "2026-04-23"
+            }
+          ],
+          "cwes": [
+            {
+              "cve": "CVE-2026-34480",
+              "cwe": "CWE-116",
+              "source": "security@apache.org",
+              "type": "Secondary"
+            }
+          ]
+        }
+      ],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "java-matcher",
+          "searchedBy": {
+            "language": "java",
+            "namespace": "github:language:java",
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "version": "2.23.1"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-3pxv-7cmr-fjr4",
+            "versionConstraint": ">=2.0-alpha1,<2.25.4 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "2.25.4"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:maven/org.apache.logging.log4j/log4j-core@2.23.1?package-id=7a1eb5789960165a",
+        "name": "log4j-core",
+        "version": "2.23.1",
+        "type": "java-archive",
+        "locations": [
+          {
+            "path": "/dist/flink-1.20/pom.xml",
+            "accessPath": ""
+          }
+        ],
+        "language": "java",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:apache:log4j-core:2.23.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:log4j_core:2.23.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:log4j:2.23.1:*:*:*:*:*:*:*"
+        ],
+        "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.23.1",
+        "upstreams": [],
+        "metadataType": "JavaMetadata",
+        "metadata": {
+          "virtualPath": "",
+          "pomArtifactID": "log4j-core",
+          "pomGroupID": "org.apache.logging.log4j",
+          "manifestName": "",
+          "archiveDigests": null
+        }
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-6hg6-v5c8-fphq",
+        "dataSource": "https://github.com/advisories/GHSA-6hg6-v5c8-fphq",
+        "namespace": "github:language:java",
+        "severity": "Medium",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2026-34477",
+          "https://github.com/apache/logging-log4j2/pull/4075",
+          "https://lists.apache.org/thread/lkx8cl46t2bvkcwfcb2pd43ygc097lq4",
+          "https://logging.apache.org/cyclonedx/vdr.xml",
+          "https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName",
+          "https://logging.apache.org/security.html#CVE-2026-34477"
+        ],
+        "description": "Apache Log4j Core: `verifyHostName` attribute silently ignored in TLS configuration",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "4.0",
+            "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:L/SA:N",
+            "metrics": {
+              "baseScore": 6.3
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "epss": [
+          {
+            "cve": "CVE-2026-34477",
+            "epss": 0.00143,
+            "percentile": 0.34565,
+            "date": "2026-04-23"
+          }
+        ],
+        "cwes": [
+          {
+            "cve": "CVE-2026-34477",
+            "cwe": "CWE-297",
+            "source": "security@apache.org",
+            "type": "Primary"
+          }
+        ],
+        "fix": {
+          "versions": [
+            "2.25.4"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "2.25.4",
+              "date": "2026-04-14",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0.080795
+      },
+      "relatedVulnerabilities": [
+        {
+          "id": "CVE-2026-34477",
+          "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2026-34477",
+          "namespace": "nvd:cpe",
+          "severity": "Medium",
+          "urls": [
+            "https://github.com/apache/logging-log4j2/pull/4075",
+            "https://lists.apache.org/thread/lkx8cl46t2bvkcwfcb2pd43ygc097lq4",
+            "https://logging.apache.org/cyclonedx/vdr.xml",
+            "https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName",
+            "https://logging.apache.org/security.html#CVE-2026-34477"
+          ],
+          "description": "The fix for  CVE-2025-68161 https://logging.apache.org/security.html#CVE-2025-68161  was incomplete: it addressed hostname verification only when enabled via the  log4j2.sslVerifyHostName https://logging.apache.org/log4j/2.x/manual/systemproperties.html#log4j2.sslVerifyHostName  system property, but not when configured through the  verifyHostName https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName  attribute of the <Ssl> element.\n\nAlthough the verifyHostName configuration attribute was introduced in Log4j Core 2.12.0, it was silently ignored in all versions through 2.25.3, leaving TLS connections vulnerable to interception regardless of the configured value.\n\nA network-based attacker may be able to perform a man-in-the-middle attack when all of the following conditions are met:\n\n  *  An SMTP, Socket, or Syslog appender is in use.\n  *  TLS is configured via a nested <Ssl> element.\n  *  The attacker can present a certificate issued by a CA trusted by the appender's configured trust store, or by the default Java trust store if none is configured.\nThis issue does not affect users of the HTTP appender, which uses a separate  verifyHostname https://logging.apache.org/log4j/2.x/manual/appenders/network.html#HttpAppender-attr-verifyHostName  attribute that was not subject to this bug and verifies host names by default.\n\nUsers are advised to upgrade to Apache Log4j Core 2.25.4, which corrects this issue.",
+          "cvss": [
+            {
+              "source": "security@apache.org",
+              "type": "Secondary",
+              "version": "4.0",
+              "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+              "metrics": {
+                "baseScore": 6.3
+              },
+              "vendorMetadata": {}
+            }
+          ],
+          "epss": [
+            {
+              "cve": "CVE-2026-34477",
+              "epss": 0.00143,
+              "percentile": 0.34565,
+              "date": "2026-04-23"
+            }
+          ],
+          "cwes": [
+            {
+              "cve": "CVE-2026-34477",
+              "cwe": "CWE-297",
+              "source": "security@apache.org",
+              "type": "Primary"
+            }
+          ]
+        }
+      ],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "java-matcher",
+          "searchedBy": {
+            "language": "java",
+            "namespace": "github:language:java",
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "version": "2.23.1"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-6hg6-v5c8-fphq",
+            "versionConstraint": ">=2.12.0,<2.25.4 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "2.25.4"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:maven/org.apache.logging.log4j/log4j-core@2.23.1?package-id=7a1eb5789960165a",
+        "name": "log4j-core",
+        "version": "2.23.1",
+        "type": "java-archive",
+        "locations": [
+          {
+            "path": "/dist/flink-1.20/pom.xml",
+            "accessPath": ""
+          }
+        ],
+        "language": "java",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:apache:log4j-core:2.23.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:log4j_core:2.23.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:log4j:2.23.1:*:*:*:*:*:*:*"
+        ],
+        "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.23.1",
+        "upstreams": [],
+        "metadataType": "JavaMetadata",
+        "metadata": {
+          "virtualPath": "",
+          "pomArtifactID": "log4j-core",
+          "pomGroupID": "org.apache.logging.log4j",
+          "manifestName": "",
+          "archiveDigests": null
+        }
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-5qcv-4rpc-jp93",
+        "dataSource": "https://github.com/advisories/GHSA-5qcv-4rpc-jp93",
+        "namespace": "github:language:java",
+        "severity": "High",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2026-35554",
+          "https://issues.apache.org/jira/browse/KAFKA-19012",
+          "https://lists.apache.org/thread/f07x7j8ovyqhjd1to25jsnqbm6wj01d6",
+          "http://www.openwall.com/lists/oss-security/2026/04/07/6",
+          "https://github.com/apache/kafka/pull/21065",
+          "https://github.com/apache/kafka/pull/21285",
+          "https://github.com/apache/kafka/pull/21286",
+          "https://github.com/apache/kafka/pull/21287",
+          "https://github.com/apache/kafka/pull/21288",
+          "https://github.com/apache/kafka/commit/1df2ac5b2ba4d1b5ed54b895ff6fb9539303ccb5"
+        ],
+        "description": "Apache Kafka Clients: Kafka Producer Message Corruption and Misrouting via Buffer Pool Race Condition",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "3.1",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+            "metrics": {
+              "baseScore": 8.7,
+              "exploitabilityScore": 2.3,
+              "impactScore": 5.8
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "epss": [
+          {
+            "cve": "CVE-2026-35554",
+            "epss": 0.00037,
+            "percentile": 0.10964,
+            "date": "2026-04-23"
+          }
+        ],
+        "cwes": [
+          {
+            "cve": "CVE-2026-35554",
+            "cwe": "CWE-362",
+            "source": "security@apache.org",
+            "type": "Secondary"
+          },
+          {
+            "cve": "CVE-2026-35554",
+            "cwe": "CWE-416",
+            "source": "security@apache.org",
+            "type": "Secondary"
+          }
+        ],
+        "fix": {
+          "versions": [
+            "4.0.2"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "4.0.2",
+              "date": "2026-04-14",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0.029969999999999997
+      },
+      "relatedVulnerabilities": [
+        {
+          "id": "CVE-2026-35554",
+          "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2026-35554",
+          "namespace": "nvd:cpe",
+          "severity": "High",
+          "urls": [
+            "https://issues.apache.org/jira/browse/KAFKA-19012",
+            "https://lists.apache.org/thread/f07x7j8ovyqhjd1to25jsnqbm6wj01d6",
+            "http://www.openwall.com/lists/oss-security/2026/04/07/6"
+          ],
+          "description": "A race condition in the Apache Kafka Java producer client\u2019s buffer pool management can cause messages to be silently delivered to incorrect topics.\n\nWhen a produce batch expires due to delivery.timeout.ms while a network request containing that batch is still in flight, the batch\u2019s ByteBuffer is prematurely deallocated and returned to the buffer pool. If a subsequent producer batch\u2014potentially destined for a different topic\u2014reuses this freed buffer before the original network request completes, the buffer contents may become corrupted. This can result in messages being delivered to unintended topics without any error being reported to the producer.\n\n\nData Confidentiality:\nMessages intended for one topic may be delivered to a different topic, potentially exposing sensitive data to consumers who have access to the destination topic but not the intended source topic.\n\nData Integrity:\nConsumers on the receiving topic may encounter unexpected or incompatible messages, leading to deserialization failures, processing errors, and corrupted downstream data.\n\nThis issue affects Apache Kafka versions \u2264 3.9.1, \u2264 4.0.1, and\u00a0 \u2264 4.1.1.\n\nKafka users are advised to upgrade to 3.9.2, 4.0.2, 4.1.2, 4.2.0, or later to address this vulnerability.",
+          "cvss": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "version": "3.1",
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+              "metrics": {
+                "baseScore": 8.7,
+                "exploitabilityScore": 2.3,
+                "impactScore": 5.8
+              },
+              "vendorMetadata": {}
+            }
+          ],
+          "epss": [
+            {
+              "cve": "CVE-2026-35554",
+              "epss": 0.00037,
+              "percentile": 0.10964,
+              "date": "2026-04-23"
+            }
+          ],
+          "cwes": [
+            {
+              "cve": "CVE-2026-35554",
+              "cwe": "CWE-362",
+              "source": "security@apache.org",
+              "type": "Secondary"
+            },
+            {
+              "cve": "CVE-2026-35554",
+              "cwe": "CWE-416",
+              "source": "security@apache.org",
+              "type": "Secondary"
+            }
+          ]
+        }
+      ],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "java-matcher",
+          "searchedBy": {
+            "language": "java",
+            "namespace": "github:language:java",
+            "package": {
+              "name": "org.apache.kafka:kafka-clients",
+              "version": "4.0.0"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-5qcv-4rpc-jp93",
+            "versionConstraint": ">=4.0.0,<4.0.2 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "4.0.2"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:maven/org.apache.kafka/kafka-clients@4.0.0?package-id=a21cf785d172366a",
+        "name": "kafka-clients",
+        "version": "4.0.0",
+        "type": "java-archive",
+        "locations": [
+          {
+            "path": "/runtime/pom.xml",
+            "accessPath": ""
+          }
+        ],
+        "language": "java",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:apache:kafka-clients:4.0.0:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:kafka_clients:4.0.0:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:kafka:4.0.0:*:*:*:*:*:*:*"
+        ],
+        "purl": "pkg:maven/org.apache.kafka/kafka-clients@4.0.0",
+        "upstreams": [],
+        "metadataType": "JavaMetadata",
+        "metadata": {
+          "virtualPath": "",
+          "pomArtifactID": "kafka-clients",
+          "pomGroupID": "org.apache.kafka",
+          "manifestName": "",
+          "archiveDigests": null
+        }
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-vc5p-v9hr-52mj",
+        "dataSource": "https://github.com/advisories/GHSA-vc5p-v9hr-52mj",
+        "namespace": "github:language:java",
+        "severity": "Medium",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-68161",
+          "https://github.com/apache/logging-log4j2/pull/4002",
+          "https://lists.apache.org/thread/xr33kyxq3sl67lwb61ggvm1fzc8k7dvx",
+          "https://logging.apache.org/cyclonedx/vdr.xml",
+          "https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName",
+          "https://logging.apache.org/log4j/2.x/manual/systemproperties.html#log4j2.sslVerifyHostName",
+          "https://logging.apache.org/security.html#CVE-2025-68161",
+          "https://github.com/apache/logging-log4j2/commit/3b93748497e1adbbd027fda8a5e7268ec5d0d578",
+          "http://www.openwall.com/lists/oss-security/2025/12/18/1"
+        ],
+        "description": "Apache Log4j does not verify the TLS hostname in its Socket Appender",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "4.0",
+            "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:L/SA:N",
+            "metrics": {
+              "baseScore": 6.3
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "epss": [
+          {
+            "cve": "CVE-2025-68161",
+            "epss": 0.00026,
+            "percentile": 0.07266,
+            "date": "2026-04-23"
+          }
+        ],
+        "cwes": [
+          {
+            "cve": "CVE-2025-68161",
+            "cwe": "CWE-297",
+            "source": "security@apache.org",
+            "type": "Secondary"
+          },
+          {
+            "cve": "CVE-2025-68161",
+            "cwe": "CWE-295",
+            "source": "nvd@nist.gov",
+            "type": "Primary"
+          }
+        ],
+        "fix": {
+          "versions": [
+            "2.25.3"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "2.25.3",
+              "date": "2025-12-20",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0.014689999999999996
+      },
+      "relatedVulnerabilities": [
+        {
+          "id": "CVE-2025-68161",
+          "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2025-68161",
+          "namespace": "nvd:cpe",
+          "severity": "Medium",
+          "urls": [
+            "https://github.com/apache/logging-log4j2/pull/4002",
+            "https://lists.apache.org/thread/xr33kyxq3sl67lwb61ggvm1fzc8k7dvx",
+            "https://logging.apache.org/cyclonedx/vdr.xml",
+            "https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName",
+            "https://logging.apache.org/log4j/2.x/manual/systemproperties.html#log4j2.sslVerifyHostName",
+            "https://logging.apache.org/security.html#CVE-2025-68161",
+            "http://www.openwall.com/lists/oss-security/2025/12/18/1",
+            "https://lists.debian.org/debian-lts-announce/2026/01/msg00015.html"
+          ],
+          "description": "The Socket Appender in Apache Log4j Core versions 2.0-beta9 through 2.25.2 does not perform TLS hostname verification of the peer certificate, even when the  verifyHostName https://logging.apache.org/log4j/2.x/manual/appenders/network.html#SslConfiguration-attr-verifyHostName  configuration attribute or the  log4j2.sslVerifyHostName https://logging.apache.org/log4j/2.x/manual/systemproperties.html#log4j2.sslVerifyHostName  system property is set to true.\n\nThis issue may allow a man-in-the-middle attacker to intercept or redirect log traffic under the following conditions:\n\n  *  The attacker is able to intercept or redirect network traffic between the client and the log receiver.\n  *  The attacker can present a server certificate issued by a certification authority trusted by the Socket Appender\u2019s configured trust store (or by the default Java trust store if no custom trust store is configured).\n\n\nUsers are advised to upgrade to Apache Log4j Core version 2.25.3, which addresses this issue.\n\nAs an alternative mitigation, the Socket Appender may be configured to use a private or restricted trust root to limit the set of trusted certificates.",
+          "cvss": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "version": "3.1",
+              "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "metrics": {
+                "baseScore": 4.8,
+                "exploitabilityScore": 2.3,
+                "impactScore": 2.6
+              },
+              "vendorMetadata": {}
+            },
+            {
+              "source": "security@apache.org",
+              "type": "Secondary",
+              "version": "4.0",
+              "vector": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+              "metrics": {
+                "baseScore": 6.3
+              },
+              "vendorMetadata": {}
+            }
+          ],
+          "epss": [
+            {
+              "cve": "CVE-2025-68161",
+              "epss": 0.00026,
+              "percentile": 0.07266,
+              "date": "2026-04-23"
+            }
+          ],
+          "cwes": [
+            {
+              "cve": "CVE-2025-68161",
+              "cwe": "CWE-297",
+              "source": "security@apache.org",
+              "type": "Secondary"
+            },
+            {
+              "cve": "CVE-2025-68161",
+              "cwe": "CWE-295",
+              "source": "nvd@nist.gov",
+              "type": "Primary"
+            }
+          ]
+        }
+      ],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "java-matcher",
+          "searchedBy": {
+            "language": "java",
+            "namespace": "github:language:java",
+            "package": {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "version": "2.23.1"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-vc5p-v9hr-52mj",
+            "versionConstraint": ">=2.0-beta9,<2.25.3 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "2.25.3"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:maven/org.apache.logging.log4j/log4j-core@2.23.1?package-id=7a1eb5789960165a",
+        "name": "log4j-core",
+        "version": "2.23.1",
+        "type": "java-archive",
+        "locations": [
+          {
+            "path": "/dist/flink-1.20/pom.xml",
+            "accessPath": ""
+          }
+        ],
+        "language": "java",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:apache:log4j-core:2.23.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:log4j_core:2.23.1:*:*:*:*:*:*:*",
+          "cpe:2.3:a:apache:log4j:2.23.1:*:*:*:*:*:*:*"
+        ],
+        "purl": "pkg:maven/org.apache.logging.log4j/log4j-core@2.23.1",
+        "upstreams": [],
+        "metadataType": "JavaMetadata",
+        "metadata": {
+          "virtualPath": "",
+          "pomArtifactID": "log4j-core",
+          "pomGroupID": "org.apache.logging.log4j",
+          "manifestName": "",
+          "archiveDigests": null
+        }
+      }
+    }
+  ],
+  "source": {
+    "type": "file",
+    "target": "/tmp/sbom_clones_a356zli0/flink-agents"
+  },
+  "distro": {
+    "name": "",
+    "version": "",
+    "idLike": null
+  },
+  "descriptor": {
+    "name": "grype",
+    "version": "0.111.1",
+    "configuration": {
+      "output": [
+        "json"
+      ],
+      "file": "",
+      "pretty": false,
+      "distro": "",
+      "add-cpes-if-none": false,
+      "output-template-file": "",
+      "check-for-app-update": true,
+      "only-fixed": false,
+      "only-notfixed": false,
+      "ignore-wontfix": "",
+      "platform": "",
+      "search": {
+        "scope": "squashed",
+        "unindexed-archives": false,
+        "indexed-archives": true
+      },
+      "ignore": [
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "kernel-headers",
+            "version": "",
+            "language": "",
+            "type": "rpm",
+            "location": "",
+            "upstream-name": "kernel"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        },
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "linux(-.*)?-headers-.*",
+            "version": "",
+            "language": "",
+            "type": "deb",
+            "location": "",
+            "upstream-name": "linux.*"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        },
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "linux-libc-dev",
+            "version": "",
+            "language": "",
+            "type": "deb",
+            "location": "",
+            "upstream-name": "linux"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        }
+      ],
+      "exclude": [],
+      "externalSources": {
+        "enable": false,
+        "maven": {
+          "searchUpstreamBySha1": true,
+          "baseUrl": "https://search.maven.org/solrsearch/select",
+          "rateLimit": 300000000
+        }
+      },
+      "match": {
+        "java": {
+          "using-cpes": false
+        },
+        "jvm": {
+          "using-cpes": true
+        },
+        "dotnet": {
+          "using-cpes": false
+        },
+        "golang": {
+          "using-cpes": false,
+          "always-use-cpe-for-stdlib": true,
+          "allow-main-module-pseudo-version-comparison": false
+        },
+        "javascript": {
+          "using-cpes": false
+        },
+        "python": {
+          "using-cpes": false
+        },
+        "ruby": {
+          "using-cpes": false
+        },
+        "rust": {
+          "using-cpes": false
+        },
+        "hex": {
+          "using-cpes": false
+        },
+        "stock": {
+          "using-cpes": true
+        },
+        "dpkg": {
+          "using-cpes": false,
+          "missing-epoch-strategy": "zero",
+          "use-cpes-for-eol": false
+        },
+        "rpm": {
+          "using-cpes": false,
+          "missing-epoch-strategy": "auto",
+          "use-cpes-for-eol": false
+        }
+      },
+      "fail-on-severity": "",
+      "registry": {
+        "insecure-skip-tls-verify": false,
+        "insecure-use-http": false,
+        "ca-cert": ""
+      },
+      "show-suppressed": false,
+      "by-cve": false,
+      "SortBy": {
+        "sort-by": "risk"
+      },
+      "name": "",
+      "default-image-pull-source": "",
+      "from": null,
+      "vex-documents": [],
+      "vex-add": [],
+      "match-upstream-kernel-headers": false,
+      "fix-channel": {
+        "redhat-eus": {
+          "apply": "auto",
+          "versions": ">= 8.0"
+        }
+      },
+      "timestamp": true,
+      "alerts": {
+        "enable-eol-distro-warnings": true
+      },
+      "db": {
+        "cache-dir": "/root/.cache/grype/db",
+        "update-url": "https://grype.anchore.io/databases",
+        "ca-cert": "",
+        "auto-update": true,
+        "validate-by-hash-on-start": true,
+        "validate-age": true,
+        "max-allowed-built-age": 432000000000000,
+        "require-update-check": false,
+        "update-available-timeout": 30000000000,
+        "update-download-timeout": 300000000000,
+        "max-update-check-frequency": 7200000000000
+      },
+      "exp": {},
+      "dev": {
+        "db": {
+          "debug": false
+        }
+      }
+    },
+    "db": {
+      "status": {
+        "schemaVersion": "v6.1.4",
+        "from": "https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.4_2026-04-24T00:41:29Z_1777013852.tar.zst?checksum=sha256%3A059e22026eeef8e4f5d447a87c35e0022331871240be2d91d289cb01e80dc1e8",
+        "built": "2026-04-24T06:57:32Z",
+        "path": "/root/.cache/grype/db/6/vulnerability.db",
+        "valid": true
+      },
+      "providers": {
+        "alma": {
+          "captured": "2026-04-24T00:41:44Z",
+          "input": "xxh64:1b46f6f1ee9783b6"
+        },
+        "alpine": {
+          "captured": "2026-04-24T00:41:42Z",
+          "input": "xxh64:b5bc7171e29b2e07"
+        },
+        "amazon": {
+          "captured": "2026-04-24T00:41:45Z",
+          "input": "xxh64:e46793f338c38dc0"
+        },
+        "arch": {
+          "captured": "2026-04-24T00:41:39Z",
+          "input": "xxh64:e731d1795ce41aa8"
+        },
+        "bitnami": {
+          "captured": "2026-04-24T00:41:48Z",
+          "input": "xxh64:6f929d540ec1d310"
+        },
+        "chainguard": {
+          "captured": "2026-04-24T00:41:41Z",
+          "input": "xxh64:72d18d7967a7b79c"
+        },
+        "chainguard-libraries": {
+          "captured": "2026-04-24T00:41:40Z",
+          "input": "xxh64:7e76c350c5d88de0"
+        },
+        "debian": {
+          "captured": "2026-04-24T00:41:53Z",
+          "input": "xxh64:b765f741446f655a"
+        },
+        "echo": {
+          "captured": "2026-04-24T00:41:53Z",
+          "input": "xxh64:6f58686b4f2f843e"
+        },
+        "eol": {
+          "captured": "2026-04-24T00:41:38Z",
+          "input": "xxh64:ac80abee58c099a0"
+        },
+        "epss": {
+          "captured": "2026-04-24T00:41:45Z",
+          "input": "xxh64:9b939850992e9aa8"
+        },
+        "fedora": {
+          "captured": "2026-04-24T00:41:47Z",
+          "input": "xxh64:1216e68c4460c727"
+        },
+        "github": {
+          "captured": "2026-04-24T00:42:14Z",
+          "input": "xxh64:839e9fd045759128"
+        },
+        "hummingbird": {
+          "captured": "2026-04-24T01:16:29Z",
+          "input": "xxh64:0b9dd553d355399e"
+        },
+        "kev": {
+          "captured": "2026-04-24T00:41:39Z",
+          "input": "xxh64:43961e175e977a58"
+        },
+        "mariner": {
+          "captured": "2026-04-24T00:41:39Z",
+          "input": "xxh64:671c0a772d53e8a5"
+        },
+        "minimos": {
+          "captured": "2026-04-24T00:41:41Z",
+          "input": "xxh64:4acd40385b025672"
+        },
+        "nvd": {
+          "captured": "2026-04-24T01:17:07Z",
+          "input": "xxh64:5942d47cb2ce0162"
+        },
+        "oracle": {
+          "captured": "2026-04-24T00:41:47Z",
+          "input": "xxh64:816e2a4b695124bb"
+        },
+        "photon": {
+          "captured": "2026-04-24T00:41:44Z",
+          "input": "xxh64:f7c04bae728c5473"
+        },
+        "rhel": {
+          "captured": "2026-04-24T00:42:14Z",
+          "input": "xxh64:9b02b6a10c0f26bd"
+        },
+        "secureos": {
+          "captured": "2026-04-24T00:41:39Z",
+          "input": "xxh64:b89bddcd81496ab1"
+        },
+        "sles": {
+          "captured": "2026-04-24T00:41:29Z",
+          "input": "xxh64:5bfb325772a64b9a"
+        },
+        "ubuntu": {
+          "captured": "2026-04-24T01:22:34Z",
+          "input": "xxh64:bda381ee90a7da24"
+        },
+        "wolfi": {
+          "captured": "2026-04-24T00:41:44Z",
+          "input": "xxh64:f85237141936f093"
+        }
+      }
+    },
+    "timestamp": "2026-04-24T16:15:11.773419495Z"
+  }
+}

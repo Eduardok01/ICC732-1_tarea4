@@ -1,0 +1,3992 @@
+{
+  "version": "1.161.0",
+  "results": [
+    {
+      "check_id": "yaml.github-actions.security.run-shell-injection.run-shell-injection",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/actions/detect-skip-ci/action.yaml",
+      "start": {
+        "line": 45,
+        "col": 7,
+        "offset": 1526
+      },
+      "end": {
+        "line": 114,
+        "col": 2,
+        "offset": 4436
+      },
+      "extra": {
+        "message": "Using variable interpolation `${{...}}` with `github` context data in a `run:` step could allow an attacker to inject their own code into the runner. This would allow them to steal secrets and code. `github` context data can have arbitrary user input and should be treated as untrusted. Instead, use an intermediate environment variable with `env:` to store the data and use the environment variable in the `run:` script. Be sure to use double-quotes the environment variable, like this: \"$ENVVAR\".",
+        "metadata": {
+          "category": "security",
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://docs.github.com/en/actions/learn-github-actions/security-hardening-for-github-actions#understanding-the-risk-of-script-injections",
+            "https://securitylab.github.com/research/github-actions-untrusted-input/"
+          ],
+          "technology": [
+            "github-actions"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "HIGH",
+          "impact": "HIGH",
+          "confidence": "HIGH",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Command Injection"
+          ],
+          "source": "https://semgrep.dev/r/yaml.github-actions.security.run-shell-injection.run-shell-injection",
+          "shortlink": "https://sg.run/pkzk"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/workflows/utils/locate_vsdevcmd_bat.py",
+      "start": {
+        "line": 43,
+        "col": 9,
+        "offset": 1508
+      },
+      "end": {
+        "line": 51,
+        "col": 10,
+        "offset": 1694
+      },
+      "extra": {
+        "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+        "metadata": {
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "asvs": {
+            "control_id": "5.3.8 OS Command Injection",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v53-output-encoding-and-injection-prevention-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "references": [
+            "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+            "https://docs.python.org/3/library/subprocess.html",
+            "https://docs.python.org/3/library/shlex.html",
+            "https://semgrep.dev/docs/cheat-sheets/python-command-injection/"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "confidence": "MEDIUM",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Command Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "shortlink": "https://sg.run/pLGg"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/_optional_torch_c_dlpack.py",
+      "start": {
+        "line": 158,
+        "col": 37,
+        "offset": 5843
+      },
+      "end": {
+        "line": 158,
+        "col": 41,
+        "offset": 5847
+      },
+      "extra": {
+        "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+        "metadata": {
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "asvs": {
+            "control_id": "5.3.8 OS Command Injection",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v53-output-encoding-and-injection-prevention-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "references": [
+            "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+            "https://docs.python.org/3/library/subprocess.html",
+            "https://docs.python.org/3/library/shlex.html",
+            "https://semgrep.dev/docs/cheat-sheets/python-command-injection/"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "confidence": "MEDIUM",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Command Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "shortlink": "https://sg.run/pLGg"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/extension.py",
+      "start": {
+        "line": 292,
+        "col": 13,
+        "offset": 10677
+      },
+      "end": {
+        "line": 300,
+        "col": 14,
+        "offset": 10895
+      },
+      "extra": {
+        "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+        "metadata": {
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "asvs": {
+            "control_id": "5.3.8 OS Command Injection",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v53-output-encoding-and-injection-prevention-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "references": [
+            "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+            "https://docs.python.org/3/library/subprocess.html",
+            "https://docs.python.org/3/library/shlex.html",
+            "https://semgrep.dev/docs/cheat-sheets/python-command-injection/"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "confidence": "MEDIUM",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Command Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "shortlink": "https://sg.run/pLGg"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/extension.py",
+      "start": {
+        "line": 324,
+        "col": 13,
+        "offset": 11813
+      },
+      "end": {
+        "line": 324,
+        "col": 24,
+        "offset": 11824
+      },
+      "extra": {
+        "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+        "metadata": {
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "asvs": {
+            "control_id": "5.3.8 OS Command Injection",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v53-output-encoding-and-injection-prevention-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "references": [
+            "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+            "https://docs.python.org/3/library/subprocess.html",
+            "https://docs.python.org/3/library/shlex.html",
+            "https://semgrep.dev/docs/cheat-sheets/python-command-injection/"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "confidence": "MEDIUM",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Command Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "shortlink": "https://sg.run/pLGg"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/extension.py",
+      "start": {
+        "line": 324,
+        "col": 85,
+        "offset": 11885
+      },
+      "end": {
+        "line": 324,
+        "col": 89,
+        "offset": 11889
+      },
+      "extra": {
+        "message": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+        "fix": "False",
+        "metadata": {
+          "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "references": [
+            "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+            "https://docs.python.org/3/library/subprocess.html"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "secure default"
+          ],
+          "likelihood": "HIGH",
+          "impact": "LOW",
+          "confidence": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Command Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+          "shortlink": "https://sg.run/J92w"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/dataclasses/py_class.py",
+      "start": {
+        "line": 490,
+        "col": 17,
+        "offset": 19950
+      },
+      "end": {
+        "line": 490,
+        "col": 49,
+        "offset": 19982
+      },
+      "extra": {
+        "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+        "metadata": {
+          "source-rule-url": "https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval",
+          "cwe": [
+            "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "asvs": {
+            "control_id": "5.2.4 Dyanmic Code Execution Features",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v52-sanitization-and-sandboxing-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A03_2021-Injection"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Code Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.eval-detected.eval-detected",
+          "shortlink": "https://sg.run/ZvrD"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/error.py",
+      "start": {
+        "line": 96,
+        "col": 16,
+        "offset": 3536
+      },
+      "end": {
+        "line": 96,
+        "col": 51,
+        "offset": 3571
+      },
+      "extra": {
+        "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+        "metadata": {
+          "source-rule-url": "https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b307-eval",
+          "cwe": [
+            "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "asvs": {
+            "control_id": "5.2.4 Dyanmic Code Execution Features",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v52-sanitization-and-sandboxing-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A03_2021-Injection"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Code Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.eval-detected.eval-detected",
+          "shortlink": "https://sg.run/ZvrD"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/_build_optional_torch_c_dlpack.py",
+      "start": {
+        "line": 631,
+        "col": 29,
+        "offset": 20578
+      },
+      "end": {
+        "line": 631,
+        "col": 38,
+        "offset": 20587
+      },
+      "extra": {
+        "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+        "metadata": {
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "asvs": {
+            "control_id": "5.3.8 OS Command Injection",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v53-output-encoding-and-injection-prevention-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "references": [
+            "https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess",
+            "https://docs.python.org/3/library/subprocess.html",
+            "https://docs.python.org/3/library/shlex.html",
+            "https://semgrep.dev/docs/cheat-sheets/python-command-injection/"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "confidence": "MEDIUM",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Command Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "shortlink": "https://sg.run/pLGg"
+        },
+        "severity": "ERROR",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.exec-detected.exec-detected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/kwargs_wrapper.py",
+      "start": {
+        "line": 305,
+        "col": 5,
+        "offset": 11906
+      },
+      "end": {
+        "line": 305,
+        "col": 44,
+        "offset": 11945
+      },
+      "extra": {
+        "message": "Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+        "metadata": {
+          "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html",
+          "cwe": [
+            "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "asvs": {
+            "control_id": "5.2.4 Dyanmic Code Execution Features",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v52-sanitization-and-sandboxing-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A03_2021-Injection"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Code Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.exec-detected.exec-detected",
+          "shortlink": "https://sg.run/ndRX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.exec-detected.exec-detected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/unpack_dataclass.py",
+      "start": {
+        "line": 248,
+        "col": 9,
+        "offset": 10326
+      },
+      "end": {
+        "line": 248,
+        "col": 73,
+        "offset": 10390
+      },
+      "extra": {
+        "message": "Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+        "metadata": {
+          "source-rule-url": "https://bandit.readthedocs.io/en/latest/plugins/b102_exec_used.html",
+          "cwe": [
+            "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "asvs": {
+            "control_id": "5.2.4 Dyanmic Code Execution Features",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v52-sanitization-and-sandboxing-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A03_2021-Injection"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "HIGH",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Code Injection"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.exec-detected.exec-detected",
+          "shortlink": "https://sg.run/ndRX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 3,
+      "level": "warn",
+      "type": "Syntax error",
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/c_api.h:1:\n `/*\n * Licensed to the Apache Software Foundation (ASF) under one\n * or more contributor license agreements.  See the NOTICE file\n * distributed with this work for additional information\n * regarding copyright ownership.  The ASF licenses this file\n * to you under the Apache License, Version 2.0 (the\n * \"License\"); you may not use this file except in compliance\n * with the License.  You may obtain a copy of the License at\n *\n *   http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing,\n * software distributed under the License is distributed on an\n * \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\n * KIND, either express or implied.  See the License for the\n * specific language governing permissions and limitations\n * under the License.\n */\n// NOLINTBEGIN(modernize-use-using,bugprone-reserved-identifier,modernize-deprecated-headers)\n/*\n * \\file tvm/ffi/c_api.h\n * \\brief This file defines the C convention of the FFI convention\n */\n#ifndef TVM_FFI_C_API_H_\n#define TVM_FFI_C_API_H_\n\n#include <dlpack/dlpack.h>\n#include <stdint.h>\n\n// Macros to do weak linking\n#ifdef _MSC_VER\n#define TVM_FFI_WEAK __declspec(selectany)\n#else\n#define TVM_FFI_WEAK __attribute__((weak))\n#endif\n\n// Defines two macros\n// TVM_FFI_DLL: marks the function as a DLL export/import\n//              depending on whether TVM_FFI_EXPORTS is defined\n// TVM_FFI_DLL_EXPORT: always marks the function as a DLL export\n#if !defined(TVM_FFI_DLL) && defined(__EMSCRIPTEN__)\n#include <emscripten/emscripten.h>\n#define TVM_FFI_DLL EMSCRIPTEN_KEEPALIVE\n#define TVM_FFI_DLL_EXPORT EMSCRIPTEN_KEEPALIVE\n#endif\n#if !defined(TVM_FFI_DLL) && defined(_MSC_VER)\n#ifdef TVM_FFI_EXPORTS\n#define TVM_FFI_DLL __declspec(dllexport)\n#else\n#define TVM_FFI_DLL __declspec(dllimport)\n#endif\n#define TVM_FFI_DLL_EXPORT __declspec(dllexport)\n#endif\n#ifndef TVM_FFI_DLL\n#define TVM_FFI_DLL __attribute__((visibility(\"default\")))\n#define TVM_FFI_DLL_EXPORT __attribute__((visibility(\"default\")))\n#endif\n\n// NOLINTBEGIN(modernize-macro-to... (truncated 51604 more characters)",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/c_api.h"
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 70,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 70,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 72,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 72,
+              "col": 25,
+              "offset": 7
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 91,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 91,
+              "col": 25,
+              "offset": 7
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 111,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 111,
+              "col": 25,
+              "offset": 7
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 139,
+              "col": 24,
+              "offset": 0
+            },
+            "end": {
+              "line": 139,
+              "col": 25,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 150,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 150,
+              "col": 19,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 172,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 172,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 175,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 175,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 182,
+              "col": 21,
+              "offset": 0
+            },
+            "end": {
+              "line": 182,
+              "col": 48,
+              "offset": 27
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 188,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 188,
+              "col": 27,
+              "offset": 9
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 193,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 193,
+              "col": 32,
+              "offset": 7
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 208,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 208,
+              "col": 20,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 249,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 249,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 261,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 261,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 263,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 263,
+              "col": 25,
+              "offset": 7
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 298,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 298,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 307,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 307,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 323,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 323,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 345,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 345,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 400,
+              "col": 24,
+              "offset": 0
+            },
+            "end": {
+              "line": 400,
+              "col": 25,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 410,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 410,
+              "col": 19,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 426,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 426,
+              "col": 19,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 461,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 461,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 471,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 471,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 480,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 480,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 483,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 483,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 491,
+              "col": 21,
+              "offset": 0
+            },
+            "end": {
+              "line": 491,
+              "col": 48,
+              "offset": 27
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 547,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 547,
+              "col": 34,
+              "offset": 9
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 555,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 555,
+              "col": 28,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 565,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 565,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 570,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 570,
+              "col": 26,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 579,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 579,
+              "col": 26,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 587,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 587,
+              "col": 31,
+              "offset": 6
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+            "start": {
+              "line": 591,
+              "col": 31,
+              "offset": 0
+            },
+            "end": {
+              "line": 591,
+              "col": 40,
+              "offset": 9
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h:70:\n `void` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 70,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 70,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 72,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 72,
+            "col": 25,
+            "offset": 7
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 91,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 91,
+            "col": 25,
+            "offset": 7
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 111,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 111,
+            "col": 25,
+            "offset": 7
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 139,
+            "col": 24,
+            "offset": 0
+          },
+          "end": {
+            "line": 139,
+            "col": 25,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 150,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 150,
+            "col": 19,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 172,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 172,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 175,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 175,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 182,
+            "col": 21,
+            "offset": 0
+          },
+          "end": {
+            "line": 182,
+            "col": 48,
+            "offset": 27
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 188,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 188,
+            "col": 27,
+            "offset": 9
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 193,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 193,
+            "col": 32,
+            "offset": 7
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 208,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 208,
+            "col": 20,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 249,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 249,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 261,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 261,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 263,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 263,
+            "col": 25,
+            "offset": 7
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 298,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 298,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 307,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 307,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 323,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 323,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 345,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 345,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 400,
+            "col": 24,
+            "offset": 0
+          },
+          "end": {
+            "line": 400,
+            "col": 25,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 410,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 410,
+            "col": 19,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 426,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 426,
+            "col": 19,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 461,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 461,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 471,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 471,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 480,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 480,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 483,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 483,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 491,
+            "col": 21,
+            "offset": 0
+          },
+          "end": {
+            "line": 491,
+            "col": 48,
+            "offset": 27
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 547,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 547,
+            "col": 34,
+            "offset": 9
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 555,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 555,
+            "col": 28,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 565,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 565,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 570,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 570,
+            "col": 26,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 579,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 579,
+            "col": 26,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 587,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 587,
+            "col": 31,
+            "offset": 6
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+          "start": {
+            "line": 591,
+            "col": 31,
+            "offset": 0
+          },
+          "end": {
+            "line": 591,
+            "col": 40,
+            "offset": 9
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+            "start": {
+              "line": 153,
+              "col": 7,
+              "offset": 0
+            },
+            "end": {
+              "line": 153,
+              "col": 13,
+              "offset": 6
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+            "start": {
+              "line": 153,
+              "col": 23,
+              "offset": 0
+            },
+            "end": {
+              "line": 153,
+              "col": 34,
+              "offset": 11
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+            "start": {
+              "line": 1592,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 1592,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+            "start": {
+              "line": 1610,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 1610,
+              "col": 78,
+              "offset": 50
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+            "start": {
+              "line": 1638,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 1638,
+              "col": 87,
+              "offset": 59
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+            "start": {
+              "line": 1682,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 1682,
+              "col": 46,
+              "offset": 18
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h:153:\n `return` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+          "start": {
+            "line": 153,
+            "col": 7,
+            "offset": 0
+          },
+          "end": {
+            "line": 153,
+            "col": 13,
+            "offset": 6
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+          "start": {
+            "line": 153,
+            "col": 23,
+            "offset": 0
+          },
+          "end": {
+            "line": 153,
+            "col": 34,
+            "offset": 11
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+          "start": {
+            "line": 1592,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 1592,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+          "start": {
+            "line": 1610,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 1610,
+            "col": 78,
+            "offset": 50
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+          "start": {
+            "line": 1638,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 1638,
+            "col": 87,
+            "offset": 59
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+          "start": {
+            "line": 1682,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 1682,
+            "col": 46,
+            "offset": 18
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+            "start": {
+              "line": 77,
+              "col": 47,
+              "offset": 0
+            },
+            "end": {
+              "line": 77,
+              "col": 59,
+              "offset": 12
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+            "start": {
+              "line": 282,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 282,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+            "start": {
+              "line": 295,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 295,
+              "col": 78,
+              "offset": 50
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+            "start": {
+              "line": 314,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 314,
+              "col": 87,
+              "offset": 59
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+            "start": {
+              "line": 353,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 353,
+              "col": 46,
+              "offset": 18
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h:77:\n `->operator[]` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+          "start": {
+            "line": 77,
+            "col": 47,
+            "offset": 0
+          },
+          "end": {
+            "line": 77,
+            "col": 59,
+            "offset": 12
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+          "start": {
+            "line": 282,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 282,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+          "start": {
+            "line": 295,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 295,
+            "col": 78,
+            "offset": 50
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+          "start": {
+            "line": 314,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 314,
+            "col": 87,
+            "offset": 59
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+          "start": {
+            "line": 353,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 353,
+            "col": 46,
+            "offset": 18
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+            "start": {
+              "line": 889,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 889,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+            "start": {
+              "line": 896,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 896,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+            "start": {
+              "line": 900,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 900,
+              "col": 35,
+              "offset": 10
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+            "start": {
+              "line": 904,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 904,
+              "col": 91,
+              "offset": 63
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+            "start": {
+              "line": 913,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 913,
+              "col": 46,
+              "offset": 18
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+            "start": {
+              "line": 914,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 914,
+              "col": 49,
+              "offset": 21
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h:889:\n `void` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+          "start": {
+            "line": 889,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 889,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+          "start": {
+            "line": 896,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 896,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+          "start": {
+            "line": 900,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 900,
+            "col": 35,
+            "offset": 10
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+          "start": {
+            "line": 904,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 904,
+            "col": 91,
+            "offset": 63
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+          "start": {
+            "line": 913,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 913,
+            "col": 46,
+            "offset": 18
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+          "start": {
+            "line": 914,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 914,
+            "col": 49,
+            "offset": 21
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 121,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 121,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 127,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 127,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 133,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 133,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 136,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 136,
+              "col": 19,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 141,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 141,
+              "col": 19,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 147,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 147,
+              "col": 23,
+              "offset": 5
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 152,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 152,
+              "col": 23,
+              "offset": 5
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 163,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 163,
+              "col": 19,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 180,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 180,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 188,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 188,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 196,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 196,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 214,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 214,
+              "col": 92,
+              "offset": 64
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 224,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 224,
+              "col": 46,
+              "offset": 18
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+            "start": {
+              "line": 228,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 228,
+              "col": 49,
+              "offset": 21
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h:121:\n `bool` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 121,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 121,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 127,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 127,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 133,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 133,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 136,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 136,
+            "col": 19,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 141,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 141,
+            "col": 19,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 147,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 147,
+            "col": 23,
+            "offset": 5
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 152,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 152,
+            "col": 23,
+            "offset": 5
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 163,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 163,
+            "col": 19,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 180,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 180,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 188,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 188,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 196,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 196,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 214,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 214,
+            "col": 92,
+            "offset": 64
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 224,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 224,
+            "col": 46,
+            "offset": 18
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+          "start": {
+            "line": 228,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 228,
+            "col": 49,
+            "offset": 21
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_equal.h",
+            "start": {
+              "line": 47,
+              "col": 32,
+              "offset": 0
+            },
+            "end": {
+              "line": 47,
+              "col": 36,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_equal.h",
+            "start": {
+              "line": 71,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 71,
+              "col": 22,
+              "offset": 4
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_equal.h:47:\n `bool` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_equal.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_equal.h",
+          "start": {
+            "line": 47,
+            "col": 32,
+            "offset": 0
+          },
+          "end": {
+            "line": 47,
+            "col": 36,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_equal.h",
+          "start": {
+            "line": 71,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 71,
+            "col": 22,
+            "offset": 4
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_hash.h",
+            "start": {
+              "line": 45,
+              "col": 32,
+              "offset": 0
+            },
+            "end": {
+              "line": 45,
+              "col": 40,
+              "offset": 8
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_hash.h",
+            "start": {
+              "line": 52,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 52,
+              "col": 26,
+              "offset": 8
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_hash.h:45:\n `uint64_t` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_hash.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_hash.h",
+          "start": {
+            "line": 45,
+            "col": 32,
+            "offset": 0
+          },
+          "end": {
+            "line": 45,
+            "col": 40,
+            "offset": 8
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_hash.h",
+          "start": {
+            "line": 52,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 52,
+            "col": 26,
+            "offset": 8
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 125,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 125,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 248,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 248,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 249,
+              "col": 13,
+              "offset": 0
+            },
+            "end": {
+              "line": 249,
+              "col": 23,
+              "offset": 10
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 305,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 305,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 587,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 587,
+              "col": 28,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 614,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 614,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 629,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 629,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 637,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 637,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 695,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 695,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 697,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 697,
+              "col": 22,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 853,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 853,
+              "col": 19,
+              "offset": 1
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 900,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 900,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 904,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 904,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 909,
+              "col": 25,
+              "offset": 0
+            },
+            "end": {
+              "line": 909,
+              "col": 29,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 917,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 918,
+              "col": 28,
+              "offset": 80
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 927,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 927,
+              "col": 46,
+              "offset": 18
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+            "start": {
+              "line": 928,
+              "col": 28,
+              "offset": 0
+            },
+            "end": {
+              "line": 928,
+              "col": 49,
+              "offset": 21
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h:125:\n `void` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 125,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 125,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 248,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 248,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 249,
+            "col": 13,
+            "offset": 0
+          },
+          "end": {
+            "line": 249,
+            "col": 23,
+            "offset": 10
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 305,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 305,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 587,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 587,
+            "col": 28,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 614,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 614,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 629,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 629,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 637,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 637,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 695,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 695,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 697,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 697,
+            "col": 22,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 853,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 853,
+            "col": 19,
+            "offset": 1
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 900,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 900,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 904,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 904,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 909,
+            "col": 25,
+            "offset": 0
+          },
+          "end": {
+            "line": 909,
+            "col": 29,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 917,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 918,
+            "col": 28,
+            "offset": 80
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 927,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 927,
+            "col": 46,
+            "offset": 18
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+          "start": {
+            "line": 928,
+            "col": 28,
+            "offset": 0
+          },
+          "end": {
+            "line": 928,
+            "col": 49,
+            "offset": 21
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/memory.h",
+            "start": {
+              "line": 56,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 56,
+              "col": 20,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/memory.h",
+            "start": {
+              "line": 86,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 86,
+              "col": 20,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/memory.h",
+            "start": {
+              "line": 187,
+              "col": 9,
+              "offset": 0
+            },
+            "end": {
+              "line": 187,
+              "col": 16,
+              "offset": 7
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/memory.h:56:\n `void` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/memory.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/memory.h",
+          "start": {
+            "line": 56,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 56,
+            "col": 20,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/memory.h",
+          "start": {
+            "line": 86,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 86,
+            "col": 20,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/memory.h",
+          "start": {
+            "line": 187,
+            "col": 9,
+            "offset": 0
+          },
+          "end": {
+            "line": 187,
+            "col": 16,
+            "offset": 7
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/accessor.h",
+            "start": {
+              "line": 154,
+              "col": 5,
+              "offset": 0
+            },
+            "end": {
+              "line": 154,
+              "col": 37,
+              "offset": 32
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/accessor.h",
+            "start": {
+              "line": 157,
+              "col": 64,
+              "offset": 0
+            },
+            "end": {
+              "line": 157,
+              "col": 92,
+              "offset": 28
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/accessor.h:154:\n `operator()(obj_ptr.get(), value)` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/accessor.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/accessor.h",
+          "start": {
+            "line": 154,
+            "col": 5,
+            "offset": 0
+          },
+          "end": {
+            "line": 154,
+            "col": 37,
+            "offset": 32
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/accessor.h",
+          "start": {
+            "line": 157,
+            "col": 64,
+            "offset": 0
+          },
+          "end": {
+            "line": 157,
+            "col": 92,
+            "offset": 28
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 202,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 202,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 293,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 293,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 382,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 382,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 418,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 418,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 446,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 446,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 469,
+              "col": 18,
+              "offset": 0
+            },
+            "end": {
+              "line": 469,
+              "col": 21,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 526,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 526,
+              "col": 19,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 555,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 555,
+              "col": 19,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 573,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 573,
+              "col": 19,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 588,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 588,
+              "col": 19,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 604,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 604,
+              "col": 19,
+              "offset": 3
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 614,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 614,
+              "col": 22,
+              "offset": 6
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 623,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 623,
+              "col": 20,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 635,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 635,
+              "col": 20,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 648,
+              "col": 16,
+              "offset": 0
+            },
+            "end": {
+              "line": 648,
+              "col": 20,
+              "offset": 4
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+            "start": {
+              "line": 750,
+              "col": 24,
+              "offset": 0
+            },
+            "end": {
+              "line": 750,
+              "col": 27,
+              "offset": 3
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h:202:\n `int` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 202,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 202,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 293,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 293,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 382,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 382,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 418,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 418,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 446,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 446,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 469,
+            "col": 18,
+            "offset": 0
+          },
+          "end": {
+            "line": 469,
+            "col": 21,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 526,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 526,
+            "col": 19,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 555,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 555,
+            "col": 19,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 573,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 573,
+            "col": 19,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 588,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 588,
+            "col": 19,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 604,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 604,
+            "col": 19,
+            "offset": 3
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 614,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 614,
+            "col": 22,
+            "offset": 6
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 623,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 623,
+            "col": 20,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 635,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 635,
+            "col": 20,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 648,
+            "col": 16,
+            "offset": 0
+          },
+          "end": {
+            "line": 648,
+            "col": 20,
+            "offset": 4
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+          "start": {
+            "line": 750,
+            "col": 24,
+            "offset": 0
+          },
+          "end": {
+            "line": 750,
+            "col": 27,
+            "offset": 3
+          }
+        }
+      ]
+    }
+  ],
+  "paths": {
+    "scanned": [
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.asf.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.clang-format",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.clang-tidy",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.claude/launch.json",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.claude/skills/devtools/SKILL.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.cmake-format.json",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/actions/build-orcjit-wheel/action.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/actions/build-wheel-for-publish/action.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/actions/detect-env-vars/action.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/actions/detect-skip-ci/action.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/workflows/ci_mainline_only.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/workflows/ci_test.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/workflows/publish_orcjit_wheel.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/workflows/publish_wheel.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/workflows/torch_c_dlpack.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/workflows/utils/locate_vsdevcmd_bat.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.gitignore",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.gitmodules",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.markdownlint-cli2.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.pre-commit-config.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.yamllint.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/CLAUDE.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/CONTRIBUTING.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/KEYS",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/LICENSE",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/NOTICE",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/torch_c_dlpack_ext/LICENSE",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/torch_c_dlpack_ext/NOTICE",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/torch_c_dlpack_ext/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/torch_c_dlpack_ext/build_aot_wheels.bat",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/torch_c_dlpack_ext/build_aot_wheels.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/torch_c_dlpack_ext/build_backend.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/torch_c_dlpack_ext/pyproject.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/torch_c_dlpack_ext/torch_c_dlpack_ext/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/torch_c_dlpack_ext/torch_c_dlpack_ext/core.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/ORCJIT_PRIMER.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/examples/quick-start/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/examples/quick-start/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/examples/quick-start/add.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/examples/quick-start/add_c.c",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/examples/quick-start/run.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/pyproject.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/python/tvm_ffi_orcjit/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/python/tvm_ffi_orcjit/_ffi_api.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/python/tvm_ffi_orcjit/dylib.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/python/tvm_ffi_orcjit/session.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/src/ffi/orcjit_dylib.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/src/ffi/orcjit_dylib.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/src/ffi/orcjit_session.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/src/ffi/orcjit_session.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/addons/tvm_ffi_orcjit/src/ffi/orcjit_utils.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/cmake/Utils/AddGoogleTest.cmake",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/cmake/Utils/AddLibbacktrace.cmake",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/cmake/Utils/CxxWarning.cmake",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/cmake/Utils/DetectTargetTriple.cmake",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/cmake/Utils/EmbedCubin.cmake",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/cmake/Utils/Library.cmake",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/cmake/Utils/ObjectCopyUtil.cmake",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/cmake/Utils/Sanitizer.cmake",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/cmake/tvm_ffi-config.cmake",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/.gitignore",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/.rstcheck.cfg",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/_static/custom.css",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/_stubs/cpp_index.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/concepts/abi_overview.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/concepts/any.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/concepts/containers.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/concepts/exception_handling.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/concepts/func_module.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/concepts/object_and_class.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/concepts/structural_eq_hash.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/concepts/tensor.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/conf.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/dev/ci_cd.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/dev/doc_build.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/dev/release_process.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/dev/source_build.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/get_started/quickstart.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/get_started/stable_c_abi.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/guides/compiler_integration.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/guides/cpp_lang_guide.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/guides/cubin_launcher.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/guides/dataclass_reflection.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/guides/export_func_cls.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/guides/kernel_library_guide.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/guides/python_lang_guide.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/guides/rust_lang_guide.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/index.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/packaging/cpp_tooling.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/packaging/python_packaging.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/packaging/stubgen.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/reference/cpp/index.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/reference/python/index.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/docs/reference/rust/index.rst",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/abi_overview/example_code.c",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/benchmark_overhead.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/dynamic_cubin/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/dynamic_cubin/main.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/dynamic_cubin/src/kernel.cu",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/dynamic_cubin/src/lib_dynamic.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/cpp_embed/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/cpp_embed/main.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/cpp_embed/src/kernel.cu",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/cpp_embed/src/lib_embedded.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/embed_with_tvm_ffi/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/embed_with_tvm_ffi/main.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/embed_with_tvm_ffi/src/kernel.cu",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/embed_with_tvm_ffi/src/lib_embedded.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/include_bin2c/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/include_bin2c/main.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/include_bin2c/src/.gitignore",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/include_bin2c/src/kernel.cu",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/embedded_cubin/include_bin2c/src/lib_embedded.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/example_nvrtc_cubin.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/cubin_launcher/example_triton_cubin.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/inline_module/main.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/kernel_library/load_scale.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/kernel_library/scale_kernel.cu",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/kernel_library/tvm_ffi_utils.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/python_packaging/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/python_packaging/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/python_packaging/pyproject.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/python_packaging/python/my_ffi_extension/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/python_packaging/python/my_ffi_extension/_ffi_api.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/python_packaging/run_example.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/python_packaging/src/extension.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/compile/add_one_cpu.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/compile/add_one_cuda.cu",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/load/load_cpp.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/load/load_cuda.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/load/load_cupy.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/load/load_numpy.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/load/load_paddle.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/load/load_pytorch.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/raw_compile.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/run_all_cpu.bat",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/run_all_cpu.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/quickstart/run_all_cuda.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/stable_c_abi/CMakeLists.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/stable_c_abi/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/stable_c_abi/raw_compile.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/stable_c_abi/run_all.bat",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/stable_c_abi/run_all.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/stable_c_abi/src/add_one_cpu.c",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/examples/stable_c_abi/src/load.c",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/any.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/base_details.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/c_api.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/cast.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/array.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/container_details.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/dict.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/list.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/map_base.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/seq_base.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/shape.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tensor.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/tuple.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/container/variant.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/dtype.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/endian.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/enum.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/error.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/expected.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/base.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/base64.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/c_env_api.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/cuda/base.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/cuda/cubin_launcher.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/cuda/device_guard.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/cuda/internal/unified_api.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/dataclass.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/dtype.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/json.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/module.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/serialization.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/stl.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_equal.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_hash.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/extra/structural_key.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/function_details.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/memory.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/object.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/optional.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/access_path.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/accessor.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/creator.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/enum_def.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/overload.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/reflection/registry.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/rvalue_ref.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/string.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/tvm_ffi.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/include/tvm/ffi/type_traits.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/licenses/LICENSE.dlpack.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/licenses/LICENSE.libbacktrace.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/licenses/LICENSE.pytorch.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/licenses/NOTICE.pytorch.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/pyproject.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/.gitignore",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/_convert.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/_dtype.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/_dunder.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/_ffi_api.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/_optional_torch_c_dlpack.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/_tensor.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/access_path.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/config.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/container.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/core.pyi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/dtype.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/extension.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/nvrtc.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/base.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/core.pyx",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/device.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/dtype.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/error.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/function.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/object.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/pyclass_type_converter.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/string.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tensor.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/tvm_ffi_python_helpers.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cython/type_info.pxi",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/dataclasses/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/dataclasses/c_class.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/dataclasses/common.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/dataclasses/enum.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/dataclasses/field.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/dataclasses/py_class.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/error.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/libinfo.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/module.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/py.typed",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/registry.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/serialization.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/stream.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/structural.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/stub/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/stub/cli.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/stub/codegen.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/stub/consts.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/stub/file_utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/stub/lib_state.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/stub/utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/testing/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/testing/_ffi_api.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/testing/testing.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/_build_optional_torch_c_dlpack.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/embed_cubin.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/kwargs_wrapper.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/lockfile.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/unpack_dataclass.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/Cargo.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/Cargo.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/build.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/examples/load_library.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/scripts/generate_example_lib.py",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/any.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/collections/array.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/collections/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/collections/shape.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/collections/tensor.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/derive.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/device.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/dtype.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/error.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/extra/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/extra/module.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/function.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/function_internal.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/lib.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/macros.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/object.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/string.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi/src/type_traits.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-macros/Cargo.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-macros/src/lib.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-macros/src/object_macros.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-macros/src/utils.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-sys/Cargo.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-sys/build.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-sys/src/c_api.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-sys/src/c_env_api.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-sys/src/dlpack.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/rust/tvm-ffi-sys/src/lib.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/backtrace.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/backtrace_utils.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/backtrace_win.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/container.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/dtype.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/error.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/buffer_stream.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/dataclass.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/env_c_api.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/env_context.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/json_parser.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/json_writer.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/library_module.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/library_module_dynamic_lib.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/library_module_system_lib.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/module.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/module_internal.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/reflection_extra.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/serialization.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/structural_equal.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/extra/structural_hash.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/function.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/init_once.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/object.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/object_internal.h",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/tensor.cc",
+      "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/src/ffi/testing/testing.cc"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 1.0433502197265625,
+    "profiling_times": {
+      "config_time": 2.348085880279541,
+      "core_time": 5.190762519836426,
+      "ignores_time": 0.001355886459350586,
+      "total_time": 7.55755090713501
+    },
+    "parsing_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 8.60530948638916,
+      "per_file_time": {
+        "mean": 0.01059767178126744,
+        "std_dev": 0.0019733420791143053
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0,
+      "per_file_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.9831741052331384,
+      "rules_selected_ratio": 0.04053186938542706,
+      "rules_matched_ratio": 0.04053186938542706
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 1205977792
+  },
+  "engine_requested": "OSS",
+  "skipped_rules": [],
+  "profiling_results": []
+}

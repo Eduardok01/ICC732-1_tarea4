@@ -1,0 +1,168 @@
+{
+  "version": "1.161.0",
+  "results": [],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/.asf.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/.cargo/config.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/.editorconfig",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/.gitattributes",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/.github/semantic.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/.github/workflows/ci.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/.gitignore",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/CHANGELOG.md",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/CONTRIBUTING.md",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/Cargo.lock",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/Cargo.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/LICENSE",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/NOTICE",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/RELEASE.md",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/Cargo.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/bloom/builder.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/bloom/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/bloom/sketch.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/codec/assert.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/codec/decode.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/codec/encode.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/codec/family.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/codec/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/common/binomial_bounds.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/common/inv_pow2_table.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/common/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/common/num_std_dev.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/common/resize.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/countmin/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/countmin/serialization.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/countmin/sketch.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/countmin/value.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/compression.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/compression_data.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/estimator.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/kxp_byte_lookup.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/pair_table.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/serialization.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/sketch.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/union.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/cpc/wrapper.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/error.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/frequencies/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/frequencies/reverse_purge_item_hash_map.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/frequencies/serialization.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/frequencies/sketch.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hash/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hash/murmurhash.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hash/xxhash.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/array4.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/array6.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/array8.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/aux_map.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/composite_interpolation.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/container.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/coupon_mapping.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/cubic_interpolation.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/estimator.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/harmonic_numbers.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/hash_set.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/list.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/mode.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/serialization.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/sketch.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/hll/union.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/lib.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/tdigest/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/tdigest/serialization.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/tdigest/sketch.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/theta/bit_pack.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/theta/hash_table.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/theta/intersection.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/theta/mod.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/theta/serialization.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/datasketches/src/theta/sketch.rs",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/licenserc.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/rust-toolchain.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/rustfmt.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/taplo.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/tools/generate_serialization_test_data.py",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/typos.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/xtask/Cargo.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/datasketches-rust/xtask/src/main.rs"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 1.044830083847046,
+    "profiling_times": {
+      "config_time": 3.4176862239837646,
+      "core_time": 2.497891426086426,
+      "ignores_time": 0.0010957717895507812,
+      "total_time": 5.934096574783325
+    },
+    "parsing_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 1.8728818893432617,
+      "per_file_time": {
+        "mean": 0.010641374371268534,
+        "std_dev": 0.0031076918667314883
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0,
+      "per_file_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.9841227838052394,
+      "rules_selected_ratio": 0.044191585075416775,
+      "rules_matched_ratio": 0.044191585075416775
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 1495923648
+  },
+  "engine_requested": "OSS",
+  "skipped_rules": [],
+  "profiling_results": []
+}

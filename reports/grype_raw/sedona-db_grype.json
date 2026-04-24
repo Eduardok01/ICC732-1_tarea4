@@ -1,0 +1,1045 @@
+{
+  "matches": [
+    {
+      "vulnerability": {
+        "id": "GHSA-394x-vwmw-crm3",
+        "dataSource": "https://github.com/advisories/GHSA-394x-vwmw-crm3",
+        "namespace": "github:language:rust",
+        "severity": "High",
+        "urls": [
+          "https://github.com/aws/aws-lc-rs/security/advisories/GHSA-394x-vwmw-crm3",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0044.html"
+        ],
+        "description": "AWS-LC X.509 Name Constraints Bypass via Wildcard/Unicode CN",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "4.0",
+            "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+            "metrics": {
+              "baseScore": 8.2
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "fix": {
+          "versions": [
+            "0.39.0"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "0.39.0",
+              "date": "2026-03-21",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "rust-matcher",
+          "searchedBy": {
+            "language": "rust",
+            "namespace": "github:language:rust",
+            "package": {
+              "name": "aws-lc-sys",
+              "version": "0.35.0"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-394x-vwmw-crm3",
+            "versionConstraint": ">=0.32.0,<0.39.0 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "0.39.0"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:cargo/aws-lc-sys@0.35.0?package-id=5f621ccedb97ce37",
+        "name": "aws-lc-sys",
+        "version": "0.35.0",
+        "type": "rust-crate",
+        "locations": [
+          {
+            "path": "/Cargo.lock",
+            "accessPath": ""
+          }
+        ],
+        "language": "rust",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:amazon:aws-lc-sys:0.35.0:*:*:*:*:rust:*:*"
+        ],
+        "purl": "pkg:cargo/aws-lc-sys@0.35.0",
+        "upstreams": []
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-65p9-r9h6-22vj",
+        "dataSource": "https://github.com/advisories/GHSA-65p9-r9h6-22vj",
+        "namespace": "github:language:rust",
+        "severity": "High",
+        "urls": [
+          "https://github.com/aws/aws-lc-rs/security/advisories/GHSA-65p9-r9h6-22vj",
+          "https://github.com/aws/aws-lc/security/advisories/GHSA-frmv-5gcm-jwxh",
+          "https://nvd.nist.gov/vuln/detail/CVE-2026-3337",
+          "https://aws.amazon.com/security/security-bulletins/2026-005-AWS",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0043.html",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0045.html"
+        ],
+        "description": "AWS-LC has Timing Side-Channel in AES-CCM Tag Verification",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "3.1",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "metrics": {
+              "baseScore": 5.9,
+              "exploitabilityScore": 2.3,
+              "impactScore": 3.6
+            },
+            "vendorMetadata": {}
+          },
+          {
+            "type": "Secondary",
+            "version": "4.0",
+            "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+            "metrics": {
+              "baseScore": 8.2
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "fix": {
+          "versions": [
+            "0.38.0"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "0.38.0",
+              "date": "2026-03-04",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "rust-matcher",
+          "searchedBy": {
+            "language": "rust",
+            "namespace": "github:language:rust",
+            "package": {
+              "name": "aws-lc-sys",
+              "version": "0.35.0"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-65p9-r9h6-22vj",
+            "versionConstraint": ">=0.14.0,<0.38.0 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "0.38.0"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:cargo/aws-lc-sys@0.35.0?package-id=5f621ccedb97ce37",
+        "name": "aws-lc-sys",
+        "version": "0.35.0",
+        "type": "rust-crate",
+        "locations": [
+          {
+            "path": "/Cargo.lock",
+            "accessPath": ""
+          }
+        ],
+        "language": "rust",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:amazon:aws-lc-sys:0.35.0:*:*:*:*:rust:*:*"
+        ],
+        "purl": "pkg:cargo/aws-lc-sys@0.35.0",
+        "upstreams": []
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-9f94-5g5w-gf6r",
+        "dataSource": "https://github.com/advisories/GHSA-9f94-5g5w-gf6r",
+        "namespace": "github:language:rust",
+        "severity": "High",
+        "urls": [
+          "https://github.com/aws/aws-lc-rs/security/advisories/GHSA-9f94-5g5w-gf6r",
+          "https://aws.amazon.com/security/security-bulletins/2026-010-AWS",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0042.html",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0048.html"
+        ],
+        "description": "CRL Distribution Point Scope Check Logic Error in AWS-LC",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "3.1",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+            "metrics": {
+              "baseScore": 7.4,
+              "exploitabilityScore": 2.3,
+              "impactScore": 5.2
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "fix": {
+          "versions": [
+            "0.39.0"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "0.39.0",
+              "date": "2026-03-21",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "rust-matcher",
+          "searchedBy": {
+            "language": "rust",
+            "namespace": "github:language:rust",
+            "package": {
+              "name": "aws-lc-sys",
+              "version": "0.35.0"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-9f94-5g5w-gf6r",
+            "versionConstraint": ">=0.15.0,<0.39.0 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "0.39.0"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:cargo/aws-lc-sys@0.35.0?package-id=5f621ccedb97ce37",
+        "name": "aws-lc-sys",
+        "version": "0.35.0",
+        "type": "rust-crate",
+        "locations": [
+          {
+            "path": "/Cargo.lock",
+            "accessPath": ""
+          }
+        ],
+        "language": "rust",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:amazon:aws-lc-sys:0.35.0:*:*:*:*:rust:*:*"
+        ],
+        "purl": "pkg:cargo/aws-lc-sys@0.35.0",
+        "upstreams": []
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-hfpc-8r3f-gw53",
+        "dataSource": "https://github.com/advisories/GHSA-hfpc-8r3f-gw53",
+        "namespace": "github:language:rust",
+        "severity": "High",
+        "urls": [
+          "https://github.com/aws/aws-lc-rs/security/advisories/GHSA-hfpc-8r3f-gw53",
+          "https://github.com/aws/aws-lc/security/advisories/GHSA-jchq-39cv-q4wj",
+          "https://nvd.nist.gov/vuln/detail/CVE-2026-3338",
+          "https://aws.amazon.com/security/security-bulletins/2026-005-AWS",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0047.html"
+        ],
+        "description": "AWS-LC has PKCS7_verify Signature Validation Bypass",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "3.1",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "metrics": {
+              "baseScore": 7.5,
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "fix": {
+          "versions": [
+            "0.38.0"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "0.38.0",
+              "date": "2026-03-04",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "rust-matcher",
+          "searchedBy": {
+            "language": "rust",
+            "namespace": "github:language:rust",
+            "package": {
+              "name": "aws-lc-sys",
+              "version": "0.35.0"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-hfpc-8r3f-gw53",
+            "versionConstraint": ">=0.24.0,<0.38.0 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "0.38.0"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:cargo/aws-lc-sys@0.35.0?package-id=5f621ccedb97ce37",
+        "name": "aws-lc-sys",
+        "version": "0.35.0",
+        "type": "rust-crate",
+        "locations": [
+          {
+            "path": "/Cargo.lock",
+            "accessPath": ""
+          }
+        ],
+        "language": "rust",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:amazon:aws-lc-sys:0.35.0:*:*:*:*:rust:*:*"
+        ],
+        "purl": "pkg:cargo/aws-lc-sys@0.35.0",
+        "upstreams": []
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-vw5v-4f2q-w9xf",
+        "dataSource": "https://github.com/advisories/GHSA-vw5v-4f2q-w9xf",
+        "namespace": "github:language:rust",
+        "severity": "High",
+        "urls": [
+          "https://github.com/aws/aws-lc-rs/security/advisories/GHSA-vw5v-4f2q-w9xf",
+          "https://github.com/aws/aws-lc/security/advisories/GHSA-cfwj-9wp5-wqvp",
+          "https://nvd.nist.gov/vuln/detail/CVE-2026-3336",
+          "https://aws.amazon.com/security/security-bulletins/2026-005-AWS",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0046.html"
+        ],
+        "description": "AWS-LC has PKCS7_verify Certificate Chain Validation Bypass",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "3.1",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+            "metrics": {
+              "baseScore": 7.5,
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            },
+            "vendorMetadata": {}
+          },
+          {
+            "type": "Secondary",
+            "version": "4.0",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+            "metrics": {
+              "baseScore": 8.7
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "fix": {
+          "versions": [
+            "0.38.0"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "0.38.0",
+              "date": "2026-03-04",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "rust-matcher",
+          "searchedBy": {
+            "language": "rust",
+            "namespace": "github:language:rust",
+            "package": {
+              "name": "aws-lc-sys",
+              "version": "0.35.0"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-vw5v-4f2q-w9xf",
+            "versionConstraint": ">=0.24.0,<0.38.0 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "0.38.0"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:cargo/aws-lc-sys@0.35.0?package-id=5f621ccedb97ce37",
+        "name": "aws-lc-sys",
+        "version": "0.35.0",
+        "type": "rust-crate",
+        "locations": [
+          {
+            "path": "/Cargo.lock",
+            "accessPath": ""
+          }
+        ],
+        "language": "rust",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:amazon:aws-lc-sys:0.35.0:*:*:*:*:rust:*:*"
+        ],
+        "purl": "pkg:cargo/aws-lc-sys@0.35.0",
+        "upstreams": []
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-g98v-hv3f-hcfr",
+        "dataSource": "https://github.com/advisories/GHSA-g98v-hv3f-hcfr",
+        "namespace": "github:language:rust",
+        "severity": "Low",
+        "urls": [
+          "https://github.com/softprops/atty/issues/50",
+          "https://github.com/softprops/atty/pull/51",
+          "https://rustsec.org/advisories/RUSTSEC-2021-0145.html"
+        ],
+        "description": "atty potential unaligned read",
+        "cvss": [],
+        "fix": {
+          "versions": [],
+          "state": "not-fixed"
+        },
+        "advisories": [],
+        "risk": 0
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "rust-matcher",
+          "searchedBy": {
+            "language": "rust",
+            "namespace": "github:language:rust",
+            "package": {
+              "name": "atty",
+              "version": "0.2.14"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-g98v-hv3f-hcfr",
+            "versionConstraint": "<=0.2.14 (unknown)"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:cargo/atty@0.2.14?package-id=85eba07b1451d7af",
+        "name": "atty",
+        "version": "0.2.14",
+        "type": "rust-crate",
+        "locations": [
+          {
+            "path": "/Cargo.lock",
+            "accessPath": ""
+          }
+        ],
+        "language": "rust",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:atty:atty:0.2.14:*:*:*:*:*:*:*"
+        ],
+        "purl": "pkg:cargo/atty@0.2.14",
+        "upstreams": []
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-cq8v-f236-94qc",
+        "dataSource": "https://github.com/advisories/GHSA-cq8v-f236-94qc",
+        "namespace": "github:language:rust",
+        "severity": "Low",
+        "urls": [
+          "https://github.com/rust-random/rand/pull/1763",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0097.html"
+        ],
+        "description": "Rand is unsound with a custom logger using rand::rng()",
+        "cvss": [],
+        "fix": {
+          "versions": [
+            "0.9.3"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "0.9.3",
+              "date": "2026-04-14",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "rust-matcher",
+          "searchedBy": {
+            "language": "rust",
+            "namespace": "github:language:rust",
+            "package": {
+              "name": "rand",
+              "version": "0.9.2"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-cq8v-f236-94qc",
+            "versionConstraint": ">=0.9.0,<0.9.3 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "0.9.3"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:cargo/rand@0.9.2?package-id=997b053d26e66e2e",
+        "name": "rand",
+        "version": "0.9.2",
+        "type": "rust-crate",
+        "locations": [
+          {
+            "path": "/Cargo.lock",
+            "accessPath": ""
+          }
+        ],
+        "language": "rust",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:rand_project:rand:0.9.2:*:*:*:*:*:*:*"
+        ],
+        "purl": "pkg:cargo/rand@0.9.2",
+        "upstreams": []
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-965h-392x-2mh5",
+        "dataSource": "https://github.com/advisories/GHSA-965h-392x-2mh5",
+        "namespace": "github:language:rust",
+        "severity": "Low",
+        "urls": [
+          "https://github.com/rustls/webpki/security/advisories/GHSA-965h-392x-2mh5",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0098.html"
+        ],
+        "description": "webpki: Name constraints for URI names were incorrectly accepted",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "3.1",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:L/A:N",
+            "metrics": {
+              "baseScore": 2.2,
+              "exploitabilityScore": 0.8,
+              "impactScore": 1.5
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "fix": {
+          "versions": [
+            "0.103.12"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "0.103.12",
+              "date": "2026-04-17",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "rust-matcher",
+          "searchedBy": {
+            "language": "rust",
+            "namespace": "github:language:rust",
+            "package": {
+              "name": "rustls-webpki",
+              "version": "0.103.10"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-965h-392x-2mh5",
+            "versionConstraint": ">=0.101.0,<0.103.12 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "0.103.12"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:cargo/rustls-webpki@0.103.10?package-id=28b2206aeaf16095",
+        "name": "rustls-webpki",
+        "version": "0.103.10",
+        "type": "rust-crate",
+        "locations": [
+          {
+            "path": "/Cargo.lock",
+            "accessPath": ""
+          }
+        ],
+        "language": "rust",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:rustls-webpki:rustls-webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls-webpki:rustls_webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls_webpki:rustls-webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls_webpki:rustls_webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls:rustls-webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls:rustls_webpki:0.103.10:*:*:*:*:*:*:*"
+        ],
+        "purl": "pkg:cargo/rustls-webpki@0.103.10",
+        "upstreams": []
+      }
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-xgp8-3hg3-c2mh",
+        "dataSource": "https://github.com/advisories/GHSA-xgp8-3hg3-c2mh",
+        "namespace": "github:language:rust",
+        "severity": "Low",
+        "urls": [
+          "https://github.com/rustls/webpki/security/advisories/GHSA-xgp8-3hg3-c2mh",
+          "https://rustsec.org/advisories/RUSTSEC-2026-0099.html"
+        ],
+        "description": "webpki: Name constraints were accepted for certificates asserting a wildcard name",
+        "cvss": [
+          {
+            "type": "Secondary",
+            "version": "3.1",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:L/A:N",
+            "metrics": {
+              "baseScore": 2.2,
+              "exploitabilityScore": 0.8,
+              "impactScore": 1.5
+            },
+            "vendorMetadata": {}
+          }
+        ],
+        "fix": {
+          "versions": [
+            "0.103.12"
+          ],
+          "state": "fixed",
+          "available": [
+            {
+              "version": "0.103.12",
+              "date": "2026-04-17",
+              "kind": "first-observed"
+            }
+          ]
+        },
+        "advisories": [],
+        "risk": 0
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-direct-match",
+          "matcher": "rust-matcher",
+          "searchedBy": {
+            "language": "rust",
+            "namespace": "github:language:rust",
+            "package": {
+              "name": "rustls-webpki",
+              "version": "0.103.10"
+            }
+          },
+          "found": {
+            "vulnerabilityID": "GHSA-xgp8-3hg3-c2mh",
+            "versionConstraint": ">=0.101.0,<0.103.12 (unknown)"
+          },
+          "fix": {
+            "suggestedVersion": "0.103.12"
+          }
+        }
+      ],
+      "artifact": {
+        "id": "pkg:cargo/rustls-webpki@0.103.10?package-id=28b2206aeaf16095",
+        "name": "rustls-webpki",
+        "version": "0.103.10",
+        "type": "rust-crate",
+        "locations": [
+          {
+            "path": "/Cargo.lock",
+            "accessPath": ""
+          }
+        ],
+        "language": "rust",
+        "licenses": [],
+        "cpes": [
+          "cpe:2.3:a:rustls-webpki:rustls-webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls-webpki:rustls_webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls_webpki:rustls-webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls_webpki:rustls_webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls:rustls-webpki:0.103.10:*:*:*:*:*:*:*",
+          "cpe:2.3:a:rustls:rustls_webpki:0.103.10:*:*:*:*:*:*:*"
+        ],
+        "purl": "pkg:cargo/rustls-webpki@0.103.10",
+        "upstreams": []
+      }
+    }
+  ],
+  "source": {
+    "type": "file",
+    "target": "/tmp/sbom_clones_a356zli0/sedona-db"
+  },
+  "distro": {
+    "name": "",
+    "version": "",
+    "idLike": null
+  },
+  "descriptor": {
+    "name": "grype",
+    "version": "0.111.1",
+    "configuration": {
+      "output": [
+        "json"
+      ],
+      "file": "",
+      "pretty": false,
+      "distro": "",
+      "add-cpes-if-none": false,
+      "output-template-file": "",
+      "check-for-app-update": true,
+      "only-fixed": false,
+      "only-notfixed": false,
+      "ignore-wontfix": "",
+      "platform": "",
+      "search": {
+        "scope": "squashed",
+        "unindexed-archives": false,
+        "indexed-archives": true
+      },
+      "ignore": [
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "kernel-headers",
+            "version": "",
+            "language": "",
+            "type": "rpm",
+            "location": "",
+            "upstream-name": "kernel"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        },
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "linux(-.*)?-headers-.*",
+            "version": "",
+            "language": "",
+            "type": "deb",
+            "location": "",
+            "upstream-name": "linux.*"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        },
+        {
+          "vulnerability": "",
+          "include-aliases": false,
+          "reason": "",
+          "namespace": "",
+          "fix-state": "",
+          "package": {
+            "name": "linux-libc-dev",
+            "version": "",
+            "language": "",
+            "type": "deb",
+            "location": "",
+            "upstream-name": "linux"
+          },
+          "vex-status": "",
+          "vex-justification": "",
+          "match-type": "exact-indirect-match"
+        }
+      ],
+      "exclude": [],
+      "externalSources": {
+        "enable": false,
+        "maven": {
+          "searchUpstreamBySha1": true,
+          "baseUrl": "https://search.maven.org/solrsearch/select",
+          "rateLimit": 300000000
+        }
+      },
+      "match": {
+        "java": {
+          "using-cpes": false
+        },
+        "jvm": {
+          "using-cpes": true
+        },
+        "dotnet": {
+          "using-cpes": false
+        },
+        "golang": {
+          "using-cpes": false,
+          "always-use-cpe-for-stdlib": true,
+          "allow-main-module-pseudo-version-comparison": false
+        },
+        "javascript": {
+          "using-cpes": false
+        },
+        "python": {
+          "using-cpes": false
+        },
+        "ruby": {
+          "using-cpes": false
+        },
+        "rust": {
+          "using-cpes": false
+        },
+        "hex": {
+          "using-cpes": false
+        },
+        "stock": {
+          "using-cpes": true
+        },
+        "dpkg": {
+          "using-cpes": false,
+          "missing-epoch-strategy": "zero",
+          "use-cpes-for-eol": false
+        },
+        "rpm": {
+          "using-cpes": false,
+          "missing-epoch-strategy": "auto",
+          "use-cpes-for-eol": false
+        }
+      },
+      "fail-on-severity": "",
+      "registry": {
+        "insecure-skip-tls-verify": false,
+        "insecure-use-http": false,
+        "ca-cert": ""
+      },
+      "show-suppressed": false,
+      "by-cve": false,
+      "SortBy": {
+        "sort-by": "risk"
+      },
+      "name": "",
+      "default-image-pull-source": "",
+      "from": null,
+      "vex-documents": [],
+      "vex-add": [],
+      "match-upstream-kernel-headers": false,
+      "fix-channel": {
+        "redhat-eus": {
+          "apply": "auto",
+          "versions": ">= 8.0"
+        }
+      },
+      "timestamp": true,
+      "alerts": {
+        "enable-eol-distro-warnings": true
+      },
+      "db": {
+        "cache-dir": "/root/.cache/grype/db",
+        "update-url": "https://grype.anchore.io/databases",
+        "ca-cert": "",
+        "auto-update": true,
+        "validate-by-hash-on-start": true,
+        "validate-age": true,
+        "max-allowed-built-age": 432000000000000,
+        "require-update-check": false,
+        "update-available-timeout": 30000000000,
+        "update-download-timeout": 300000000000,
+        "max-update-check-frequency": 7200000000000
+      },
+      "exp": {},
+      "dev": {
+        "db": {
+          "debug": false
+        }
+      }
+    },
+    "db": {
+      "status": {
+        "schemaVersion": "v6.1.4",
+        "from": "https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.4_2026-04-24T00:41:29Z_1777013852.tar.zst?checksum=sha256%3A059e22026eeef8e4f5d447a87c35e0022331871240be2d91d289cb01e80dc1e8",
+        "built": "2026-04-24T06:57:32Z",
+        "path": "/root/.cache/grype/db/6/vulnerability.db",
+        "valid": true
+      },
+      "providers": {
+        "alma": {
+          "captured": "2026-04-24T00:41:44Z",
+          "input": "xxh64:1b46f6f1ee9783b6"
+        },
+        "alpine": {
+          "captured": "2026-04-24T00:41:42Z",
+          "input": "xxh64:b5bc7171e29b2e07"
+        },
+        "amazon": {
+          "captured": "2026-04-24T00:41:45Z",
+          "input": "xxh64:e46793f338c38dc0"
+        },
+        "arch": {
+          "captured": "2026-04-24T00:41:39Z",
+          "input": "xxh64:e731d1795ce41aa8"
+        },
+        "bitnami": {
+          "captured": "2026-04-24T00:41:48Z",
+          "input": "xxh64:6f929d540ec1d310"
+        },
+        "chainguard": {
+          "captured": "2026-04-24T00:41:41Z",
+          "input": "xxh64:72d18d7967a7b79c"
+        },
+        "chainguard-libraries": {
+          "captured": "2026-04-24T00:41:40Z",
+          "input": "xxh64:7e76c350c5d88de0"
+        },
+        "debian": {
+          "captured": "2026-04-24T00:41:53Z",
+          "input": "xxh64:b765f741446f655a"
+        },
+        "echo": {
+          "captured": "2026-04-24T00:41:53Z",
+          "input": "xxh64:6f58686b4f2f843e"
+        },
+        "eol": {
+          "captured": "2026-04-24T00:41:38Z",
+          "input": "xxh64:ac80abee58c099a0"
+        },
+        "epss": {
+          "captured": "2026-04-24T00:41:45Z",
+          "input": "xxh64:9b939850992e9aa8"
+        },
+        "fedora": {
+          "captured": "2026-04-24T00:41:47Z",
+          "input": "xxh64:1216e68c4460c727"
+        },
+        "github": {
+          "captured": "2026-04-24T00:42:14Z",
+          "input": "xxh64:839e9fd045759128"
+        },
+        "hummingbird": {
+          "captured": "2026-04-24T01:16:29Z",
+          "input": "xxh64:0b9dd553d355399e"
+        },
+        "kev": {
+          "captured": "2026-04-24T00:41:39Z",
+          "input": "xxh64:43961e175e977a58"
+        },
+        "mariner": {
+          "captured": "2026-04-24T00:41:39Z",
+          "input": "xxh64:671c0a772d53e8a5"
+        },
+        "minimos": {
+          "captured": "2026-04-24T00:41:41Z",
+          "input": "xxh64:4acd40385b025672"
+        },
+        "nvd": {
+          "captured": "2026-04-24T01:17:07Z",
+          "input": "xxh64:5942d47cb2ce0162"
+        },
+        "oracle": {
+          "captured": "2026-04-24T00:41:47Z",
+          "input": "xxh64:816e2a4b695124bb"
+        },
+        "photon": {
+          "captured": "2026-04-24T00:41:44Z",
+          "input": "xxh64:f7c04bae728c5473"
+        },
+        "rhel": {
+          "captured": "2026-04-24T00:42:14Z",
+          "input": "xxh64:9b02b6a10c0f26bd"
+        },
+        "secureos": {
+          "captured": "2026-04-24T00:41:39Z",
+          "input": "xxh64:b89bddcd81496ab1"
+        },
+        "sles": {
+          "captured": "2026-04-24T00:41:29Z",
+          "input": "xxh64:5bfb325772a64b9a"
+        },
+        "ubuntu": {
+          "captured": "2026-04-24T01:22:34Z",
+          "input": "xxh64:bda381ee90a7da24"
+        },
+        "wolfi": {
+          "captured": "2026-04-24T00:41:44Z",
+          "input": "xxh64:f85237141936f093"
+        }
+      }
+    },
+    "timestamp": "2026-04-24T16:15:13.33885759Z"
+  }
+}

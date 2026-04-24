@@ -1,0 +1,3267 @@
+{
+  "version": "1.161.0",
+  "results": [
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/_default/baseof.html",
+      "start": {
+        "line": 20,
+        "col": 44,
+        "offset": 823
+      },
+      "end": {
+        "line": 20,
+        "col": 82,
+        "offset": 861
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/_default/baseof.html",
+      "start": {
+        "line": 47,
+        "col": 11,
+        "offset": 1916
+      },
+      "end": {
+        "line": 47,
+        "col": 49,
+        "offset": 1954
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/footer.html",
+      "start": {
+        "line": 27,
+        "col": 4,
+        "offset": 945
+      },
+      "end": {
+        "line": 27,
+        "col": 101,
+        "offset": 1042
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+      "start": {
+        "line": 25,
+        "col": 4,
+        "offset": 897
+      },
+      "end": {
+        "line": 25,
+        "col": 31,
+        "offset": 924
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+      "start": {
+        "line": 37,
+        "col": 8,
+        "offset": 1400
+      },
+      "end": {
+        "line": 37,
+        "col": 56,
+        "offset": 1448
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+      "start": {
+        "line": 43,
+        "col": 12,
+        "offset": 1612
+      },
+      "end": {
+        "line": 43,
+        "col": 38,
+        "offset": 1638
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+      "start": {
+        "line": 72,
+        "col": 5,
+        "offset": 2379
+      },
+      "end": {
+        "line": 72,
+        "col": 28,
+        "offset": 2402
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-before.html",
+      "start": {
+        "line": 22,
+        "col": 14,
+        "offset": 835
+      },
+      "end": {
+        "line": 22,
+        "col": 62,
+        "offset": 883
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+      "start": {
+        "line": 35,
+        "col": 13,
+        "offset": 1319
+      },
+      "end": {
+        "line": 35,
+        "col": 46,
+        "offset": 1352
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+      "start": {
+        "line": 35,
+        "col": 73,
+        "offset": 1379
+      },
+      "end": {
+        "line": 35,
+        "col": 83,
+        "offset": 1389
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+      "start": {
+        "line": 56,
+        "col": 72,
+        "offset": 2143
+      },
+      "end": {
+        "line": 56,
+        "col": 102,
+        "offset": 2173
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+      "start": {
+        "line": 56,
+        "col": 109,
+        "offset": 2180
+      },
+      "end": {
+        "line": 56,
+        "col": 118,
+        "offset": 2189
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+      "start": {
+        "line": 62,
+        "col": 8,
+        "offset": 2378
+      },
+      "end": {
+        "line": 62,
+        "col": 36,
+        "offset": 2406
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu.html",
+      "start": {
+        "line": 41,
+        "col": 11,
+        "offset": 1351
+      },
+      "end": {
+        "line": 41,
+        "col": 22,
+        "offset": 1362
+      },
+      "extra": {
+        "message": "Detected a segment of a Flask template where autoescaping is explicitly disabled with '| safe' filter. This allows rendering of raw HTML in this segment. Ensure no user data is rendered here, otherwise this is a cross-site scripting (XSS) vulnerability.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "flask"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+          "shortlink": "https://sg.run/W8og"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-script-tag.var-in-script-tag",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu.html",
+      "start": {
+        "line": 41,
+        "col": 11,
+        "offset": 1351
+      },
+      "end": {
+        "line": 41,
+        "col": 27,
+        "offset": 1367
+      },
+      "extra": {
+        "message": "Detected a template variable used in a script tag. Although template variables are HTML escaped, HTML escaping does not always prevent cross-site scripting (XSS) attacks when used directly in JavaScript. If you need this data on the rendered page, consider placing it in the HTML portion (outside of a script tag). Alternatively, use a JavaScript-specific encoder, such as the one available in OWASP ESAPI. For Django, you may also consider using the 'json_script' template tag and retrieving the data in your script by using the element ID (e.g., `document.getElementById`).",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://adamj.eu/tech/2020/02/18/safely-including-data-for-javascript-in-a-django-template/?utm_campaign=Django%2BNewsletter&utm_medium=rss&utm_source=Django_Newsletter_12A",
+            "https://www.veracode.com/blog/secure-development/nodejs-template-engines-why-default-encoders-are-not-enough",
+            "https://github.com/ESAPI/owasp-esapi-js"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-script-tag.var-in-script-tag",
+          "shortlink": "https://sg.run/eLWE"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/title.html",
+      "start": {
+        "line": 41,
+        "col": 1,
+        "offset": 1326
+      },
+      "end": {
+        "line": 41,
+        "col": 25,
+        "offset": 1350
+      },
+      "extra": {
+        "message": "Detected a segment of a Flask template where autoescaping is explicitly disabled with '| safe' filter. This allows rendering of raw HTML in this segment. Ensure no user data is rendered here, otherwise this is a cross-site scripting (XSS) vulnerability.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "flask"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+          "shortlink": "https://sg.run/W8og"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/toc.html",
+      "start": {
+        "line": 23,
+        "col": 1,
+        "offset": 962
+      },
+      "end": {
+        "line": 23,
+        "col": 233,
+        "offset": 1194
+      },
+      "extra": {
+        "message": "Detected a segment of a Flask template where autoescaping is explicitly disabled with '| safe' filter. This allows rendering of raw HTML in this segment. Ensure no user data is rendered here, otherwise this is a cross-site scripting (XSS) vulnerability.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "flask"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+          "shortlink": "https://sg.run/W8og"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/all_versions.html",
+      "start": {
+        "line": 25,
+        "col": 16,
+        "offset": 963
+      },
+      "end": {
+        "line": 25,
+        "col": 42,
+        "offset": 989
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html",
+      "start": {
+        "line": 62,
+        "col": 17,
+        "offset": 1977
+      },
+      "end": {
+        "line": 62,
+        "col": 49,
+        "offset": 2009
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html",
+      "start": {
+        "line": 66,
+        "col": 17,
+        "offset": 2112
+      },
+      "end": {
+        "line": 66,
+        "col": 49,
+        "offset": 2144
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html",
+      "start": {
+        "line": 88,
+        "col": 17,
+        "offset": 3799
+      },
+      "end": {
+        "line": 88,
+        "col": 49,
+        "offset": 3831
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html",
+      "start": {
+        "line": 91,
+        "col": 17,
+        "offset": 3905
+      },
+      "end": {
+        "line": 91,
+        "col": 49,
+        "offset": 3937
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+      "start": {
+        "line": 26,
+        "col": 4,
+        "offset": 1029
+      },
+      "end": {
+        "line": 26,
+        "col": 83,
+        "offset": 1108
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+      "start": {
+        "line": 26,
+        "col": 65,
+        "offset": 1090
+      },
+      "end": {
+        "line": 26,
+        "col": 82,
+        "offset": 1107
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/img.html",
+      "start": {
+        "line": 30,
+        "col": 25,
+        "offset": 1096
+      },
+      "end": {
+        "line": 30,
+        "col": 41,
+        "offset": 1112
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/img.html",
+      "start": {
+        "line": 31,
+        "col": 8,
+        "offset": 1121
+      },
+      "end": {
+        "line": 31,
+        "col": 24,
+        "offset": 1137
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/img.html",
+      "start": {
+        "line": 32,
+        "col": 10,
+        "offset": 1148
+      },
+      "end": {
+        "line": 32,
+        "col": 28,
+        "offset": 1166
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+      "start": {
+        "line": 25,
+        "col": 4,
+        "offset": 950
+      },
+      "end": {
+        "line": 25,
+        "col": 56,
+        "offset": 1002
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+      "start": {
+        "line": 25,
+        "col": 38,
+        "offset": 984
+      },
+      "end": {
+        "line": 25,
+        "col": 55,
+        "offset": 1001
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.var-in-href.var-in-href",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+      "start": {
+        "line": 43,
+        "col": 4,
+        "offset": 1778
+      },
+      "end": {
+        "line": 43,
+        "col": 53,
+        "offset": 1827
+      },
+      "extra": {
+        "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely generate a URL. If using Mustache, use a URL encoding library, or prepend a slash '/' to the variable for relative links (`href=\"/{{link}}\"`). You may also consider setting the Content Security Policy (CSP) header.",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss#:~:text=javascript:%20URI",
+            "https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url",
+            "https://github.com/pugjs/pug/issues/2952",
+            "https://content-security-policy.com/"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.var-in-href.var-in-href",
+          "shortlink": "https://sg.run/x1kP"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+      "start": {
+        "line": 43,
+        "col": 36,
+        "offset": 1810
+      },
+      "end": {
+        "line": 43,
+        "col": 52,
+        "offset": 1826
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tabs.html",
+      "start": {
+        "line": 33,
+        "col": 9,
+        "offset": 1111
+      },
+      "end": {
+        "line": 33,
+        "col": 43,
+        "offset": 1145
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tabs.html",
+      "start": {
+        "line": 34,
+        "col": 5,
+        "offset": 1151
+      },
+      "end": {
+        "line": 34,
+        "col": 24,
+        "offset": 1170
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tabs.html",
+      "start": {
+        "line": 34,
+        "col": 41,
+        "offset": 1187
+      },
+      "end": {
+        "line": 34,
+        "col": 50,
+        "offset": 1196
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tabs.html",
+      "start": {
+        "line": 37,
+        "col": 15,
+        "offset": 1259
+      },
+      "end": {
+        "line": 37,
+        "col": 49,
+        "offset": 1293
+      },
+      "extra": {
+        "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+        "metadata": {
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ],
+          "references": [
+            "https://flask.palletsprojects.com/en/1.1.x/security/#cross-site-scripting-xss"
+          ],
+          "category": "security",
+          "technology": [
+            "html-templates"
+          ],
+          "confidence": "LOW",
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cross-Site-Scripting (XSS)"
+          ],
+          "source": "https://semgrep.dev/r/generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "shortlink": "https://sg.run/weNX"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/_build_backend/backend.py",
+      "start": {
+        "line": 163,
+        "col": 9,
+        "offset": 5158
+      },
+      "end": {
+        "line": 163,
+        "col": 51,
+        "offset": 5200
+      },
+      "extra": {
+        "message": "Detected a dynamic value being used with urllib. urllib supports 'file://' schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib calls to ensure user data cannot control the URLs, or consider using the 'requests' library instead.",
+        "metadata": {
+          "cwe": [
+            "CWE-939: Improper Authorization in Handler for Custom URL Scheme"
+          ],
+          "owasp": "A01:2017 - Injection",
+          "source-rule-url": "https://github.com/PyCQA/bandit/blob/b1411bfb43795d3ffd268bef17a839dee954c2b1/bandit/blacklists/calls.py#L163",
+          "bandit-code": "B310",
+          "asvs": {
+            "control_id": "5.2.4 Dynamic Code Execution Features",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md#v52-sanitization-and-sandboxing-requirements",
+            "section": "V5: Validation, Sanitization and Encoding Verification Requirements",
+            "version": "4"
+          },
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "references": [
+            "https://cwe.mitre.org/data/definitions/939.html"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Authorization"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected",
+          "shortlink": "https://sg.run/dKZZ"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/events/event.py",
+      "start": {
+        "line": 75,
+        "col": 20,
+        "offset": 2977
+      },
+      "end": {
+        "line": 75,
+        "col": 54,
+        "offset": 3011
+      },
+      "extra": {
+        "message": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+        "metadata": {
+          "source-rule-url": "https://github.com/PyCQA/bandit/blob/d5f8fa0d89d7b11442fc6ec80ca42953974354c8/bandit/blacklists/calls.py#L59",
+          "cwe": [
+            "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+          ],
+          "owasp": [
+            "A03:2017 - Sensitive Data Exposure",
+            "A02:2021 - Cryptographic Failures",
+            "A04:2025 - Cryptographic Failures"
+          ],
+          "bandit-code": "B303",
+          "asvs": {
+            "control_id": "6.2.2 Insecure Custom Algorithm",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#v62-algorithms",
+            "section": "V6 Stored Cryptography Verification Requirements",
+            "version": "4"
+          },
+          "references": [
+            "https://www.schneier.com/blog/archives/2012/10/when_will_we_se.html",
+            "https://www.trendmicro.com/vinfo/us/security/news/vulnerabilities-and-exploits/sha-1-collision-signals-the-end-of-the-algorithm-s-viability",
+            "http://2012.sharcs.org/slides/stevens.pdf",
+            "https://pycryptodome.readthedocs.io/en/latest/src/hash/sha3_256.html"
+          ],
+          "category": "security",
+          "technology": [
+            "python"
+          ],
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cryptographic Issues"
+          ],
+          "source": "https://semgrep.dev/r/python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+          "shortlink": "https://sg.run/vYrY"
+        },
+        "severity": "WARNING",
+        "fingerprint": "requires login",
+        "lines": "requires login",
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "OSS"
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 3,
+      "level": "warn",
+      "type": "Syntax error",
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/assets/search-data.js:1:\n `/*\n * Licensed to the Apache Software Foundation (ASF) under one\n * or more contributor license agreements.  See the NOTICE file\n * distributed with this work for additional information\n * regarding copyright ownership.  The ASF licenses this file\n * to you under the Apache License, Version 2.0 (the\n * \"License\"); you may not use this file except in compliance\n * with the License.  You may obtain a copy of the License at\n *\n *     http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\n'use strict';\n\n(function () {\n  const indexCfg = {{ with i18n \"bookSearchConfig\" }}\n    {{ . }};\n  {{ else }}\n   {};\n  {{ end }}\n\n  indexCfg.doc = {\n    id: 'id',\n    field: ['title', 'content'],\n    store: ['title', 'href', 'section'],\n  };\n\n  const index = FlexSearch.create('balance', indexCfg);\n  window.bookSearchIndex = index;\n\n  {{- $pages := where .Site.Pages \"Kind\" \"in\" (slice \"page\" \"section\") -}}\n  {{- $pages = where $pages \"Params.booksearchexclude\" \"!=\" true -}}\n  {{- $pages = where $pages \"Content\" \"not in\" (slice nil \"\") -}}\n\n  {{ range $index, $page := $pages }}\n  index.add({\n    'id': {{ $index }},\n    'href': '{{ $page.RelPermalink }}',\n    'title': {{ (partial \"docs/simple-title\" $page) | jsonify }},\n    'section': {{ (partial \"docs/simple-title\" $page.Parent) | jsonify }},\n    'content': {{ $page.Plain | jsonify }}\n  });\n  {{- end -}}\n})();\n` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/assets/search-data.js"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "type": "Other syntax error",
+      "message": "Other syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/footer.html:1:\n Failure: not a program",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/footer.html"
+    },
+    {
+      "code": 2,
+      "level": "warn",
+      "type": "Other syntax error",
+      "message": "Other syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html:1:\n Failure: not a program",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html"
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+            "start": {
+              "line": 27,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 27,
+              "col": 10,
+              "offset": 9
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+            "start": {
+              "line": 58,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 71,
+              "col": 40,
+              "offset": 452
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+            "start": {
+              "line": 76,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 76,
+              "col": 28,
+              "offset": 27
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html:27:\n `{{ end }}` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+          "start": {
+            "line": 27,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 27,
+            "col": 10,
+            "offset": 9
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+          "start": {
+            "line": 58,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 71,
+            "col": 40,
+            "offset": 452
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+          "start": {
+            "line": 76,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 76,
+            "col": 28,
+            "offset": 27
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+            "start": {
+              "line": 22,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 31,
+              "col": 99,
+              "offset": 385
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+            "start": {
+              "line": 46,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 52,
+              "col": 37,
+              "offset": 227
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+            "start": {
+              "line": 54,
+              "col": 3,
+              "offset": 0
+            },
+            "end": {
+              "line": 55,
+              "col": 44,
+              "offset": 53
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+            "start": {
+              "line": 61,
+              "col": 3,
+              "offset": 0
+            },
+            "end": {
+              "line": 61,
+              "col": 30,
+              "offset": 27
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+            "start": {
+              "line": 65,
+              "col": 3,
+              "offset": 0
+            },
+            "end": {
+              "line": 65,
+              "col": 13,
+              "offset": 10
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+            "start": {
+              "line": 67,
+              "col": 3,
+              "offset": 0
+            },
+            "end": {
+              "line": 68,
+              "col": 10,
+              "offset": 19
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html:22:\n `{{ $bookSection := default \"docs\" .Site.Params.BookSection  }}\n{{ if eq $bookSection \"*\" }}\n  {{ $bookSection = \"/\" }}{{/* Backward compatibility */}}\n{{ end }}\n\n{{ with .Site.GetPage $bookSection }}\n  {{ template \"book-section-children\" (dict \"Section\" . \"CurrentPage\" $) }}\n{{ end }}\n\n{{ define \"book-section-children\" }}{{/* (dict \"Section\" .Section \"CurrentPage\" .CurrentPage) */}}` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "start": {
+            "line": 22,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 31,
+            "col": 99,
+            "offset": 385
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "start": {
+            "line": 46,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 52,
+            "col": 37,
+            "offset": 227
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "start": {
+            "line": 54,
+            "col": 3,
+            "offset": 0
+          },
+          "end": {
+            "line": 55,
+            "col": 44,
+            "offset": 53
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "start": {
+            "line": 61,
+            "col": 3,
+            "offset": 0
+          },
+          "end": {
+            "line": 61,
+            "col": 30,
+            "offset": 27
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "start": {
+            "line": 65,
+            "col": 3,
+            "offset": 0
+          },
+          "end": {
+            "line": 65,
+            "col": 13,
+            "offset": 10
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "start": {
+            "line": 67,
+            "col": 3,
+            "offset": 0
+          },
+          "end": {
+            "line": 68,
+            "col": 10,
+            "offset": 19
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/all_versions.html",
+            "start": {
+              "line": 1,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 21,
+              "col": 5,
+              "offset": 850
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/all_versions.html:1:\n `{{/*\nLicensed to the Apache Software Foundation (ASF) under one\nor more contributor license agreements.  See the NOTICE file\ndistributed with this work for additional information\nregarding copyright ownership.  The ASF licenses this file\nto you under the Apache License, Version 2.0 (the\n\"License\"); you may not use this file except in compliance\nwith the License.  You may obtain a copy of the License at\n\n  http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing,\nsoftware distributed under the License is distributed on an\n\"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, either express or implied.  See the License for the\nspecific language governing permissions and limitations\nunder the License.\n*/}}{{/*\n    Generate a list of links to all previous\n    versions of the Flink docs.\n*/}}` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/all_versions.html",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/all_versions.html",
+          "start": {
+            "line": 1,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 21,
+            "col": 5,
+            "offset": 850
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file.html",
+            "start": {
+              "line": 1,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 18,
+              "col": 5,
+              "offset": 762
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file.html:1:\n `{{/*\nLicensed to the Apache Software Foundation (ASF) under one\nor more contributor license agreements.  See the NOTICE file\ndistributed with this work for additional information\nregarding copyright ownership.  The ASF licenses this file\nto you under the Apache License, Version 2.0 (the\n\"License\"); you may not use this file except in compliance\nwith the License.  You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing,\nsoftware distributed under the License is distributed on an\n\"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, either express or implied.  See the License for the\nspecific language governing permissions and limitations\nunder the License.\n*/}}` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file.html",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file.html",
+          "start": {
+            "line": 1,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 18,
+            "col": 5,
+            "offset": 762
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file_zh.html",
+            "start": {
+              "line": 1,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 18,
+              "col": 5,
+              "offset": 764
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file_zh.html:1:\n `{{/*\nLicensed to the Apache Software Foundation (ASF) under one\nor more contributor license agreements.  See the NOTICE file\ndistributed with this work for additional information\nregarding copyright ownership.  The ASF licenses this file\nto you under the Apache License, Version 2.0 (the\n\"License\"); you may not use this file except in compliance\nwith the License.  You may obtain a copy of the License at\n\n  http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing,\nsoftware distributed under the License is distributed on an\n\"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, either express or implied.  See the License for the\nspecific language governing permissions and limitations\nunder the License.\n*/}}` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file_zh.html",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file_zh.html",
+          "start": {
+            "line": 1,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 18,
+            "col": 5,
+            "offset": 764
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+            "start": {
+              "line": 1,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 25,
+              "col": 5,
+              "offset": 1025
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+            "start": {
+              "line": 26,
+              "col": 78,
+              "offset": 0
+            },
+            "end": {
+              "line": 26,
+              "col": 83,
+              "offset": 5
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html:1:\n `{{/*\nLicensed to the Apache Software Foundation (ASF) under one\nor more contributor license agreements.  See the NOTICE file\ndistributed with this work for additional information\nregarding copyright ownership.  The ASF licenses this file\nto you under the Apache License, Version 2.0 (the\n\"License\"); you may not use this file except in compliance\nwith the License.  You may obtain a copy of the License at\n\n  http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing,\nsoftware distributed under the License is distributed on an\n\"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, either express or implied.  See the License for the\nspecific language governing permissions and limitations\nunder the License.\n*/}}{{/*\n    Shortcode for linking to a file in github. This shortcode\n    will automatically discover the repo and correct branch.\n\n    Parmeters:\n        - file: The absolute path to the image file (required)\n        - name: The rendered link name (required)\n*/}}` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+          "start": {
+            "line": 1,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 25,
+            "col": 5,
+            "offset": 1025
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+          "start": {
+            "line": 26,
+            "col": 78,
+            "offset": 0
+          },
+          "end": {
+            "line": 26,
+            "col": 83,
+            "offset": 5
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+            "start": {
+              "line": 1,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 24,
+              "col": 5,
+              "offset": 946
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+            "start": {
+              "line": 25,
+              "col": 51,
+              "offset": 0
+            },
+            "end": {
+              "line": 25,
+              "col": 56,
+              "offset": 5
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html:1:\n `{{/*\nLicensed to the Apache Software Foundation (ASF) under one\nor more contributor license agreements.  See the NOTICE file\ndistributed with this work for additional information\nregarding copyright ownership.  The ASF licenses this file\nto you under the Apache License, Version 2.0 (the\n\"License\"); you may not use this file except in compliance\nwith the License.  You may obtain a copy of the License at\n\n  http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing,\nsoftware distributed under the License is distributed on an\n\"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, either express or implied.  See the License for the\nspecific language governing permissions and limitations\nunder the License.\n*/}}{{/*\n    Shortcode for linking to Flink's JavaDoc\n\n    Parameters:\n        - file: The relative path to the doc file (required)\n        - name: The rendered link name (required)\n*/}}` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+          "start": {
+            "line": 1,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 24,
+            "col": 5,
+            "offset": 946
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+          "start": {
+            "line": 25,
+            "col": 51,
+            "offset": 0
+          },
+          "end": {
+            "line": 25,
+            "col": 56,
+            "offset": 5
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+            "start": {
+              "line": 1,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 24,
+              "col": 5,
+              "offset": 948
+            }
+          },
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+            "start": {
+              "line": 43,
+              "col": 49,
+              "offset": 0
+            },
+            "end": {
+              "line": 43,
+              "col": 53,
+              "offset": 4
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html:1:\n `{{/*\nLicensed to the Apache Software Foundation (ASF) under one\nor more contributor license agreements.  See the NOTICE file\ndistributed with this work for additional information\nregarding copyright ownership.  The ASF licenses this file\nto you under the Apache License, Version 2.0 (the\n\"License\"); you may not use this file except in compliance\nwith the License.  You may obtain a copy of the License at\n\n  http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing,\nsoftware distributed under the License is distributed on an\n\"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, either express or implied.  See the License for the\nspecific language governing permissions and limitations\nunder the License.\n*/}}{{/*\n    Shortcode for linking to Flink's PythonDoc\n\n    Parameters:\n        - file: The relative path to the doc file (required)\n        - name: The rendered link name (required)\n*/}}` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+          "start": {
+            "line": 1,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 24,
+            "col": 5,
+            "offset": 948
+          }
+        },
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+          "start": {
+            "line": 43,
+            "col": 49,
+            "offset": 0
+          },
+          "end": {
+            "line": 43,
+            "col": 53,
+            "offset": 4
+          }
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "level": "warn",
+      "type": [
+        "PartialParsing",
+        [
+          {
+            "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/top.html",
+            "start": {
+              "line": 1,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 22,
+              "col": 5,
+              "offset": 836
+            }
+          }
+        ]
+      ],
+      "message": "Syntax error at line /tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/top.html:1:\n `{{/*\nLicensed to the Apache Software Foundation (ASF) under one\nor more contributor license agreements.  See the NOTICE file\ndistributed with this work for additional information\nregarding copyright ownership.  The ASF licenses this file\nto you under the Apache License, Version 2.0 (the\n\"License\"); you may not use this file except in compliance\nwith the License.  You may obtain a copy of the License at\n\n  http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing,\nsoftware distributed under the License is distributed on an\n\"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\nKIND, either express or implied.  See the License for the\nspecific language governing permissions and limitations\nunder the License.\n*/}}{{/*\n  Shortcode that adds a \"Back to Top\" link.\n\n  Parmeters: None\n*/}}` was unexpected",
+      "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/top.html",
+      "spans": [
+        {
+          "file": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/top.html",
+          "start": {
+            "line": 1,
+            "col": 1,
+            "offset": 0
+          },
+          "end": {
+            "line": 22,
+            "col": 5,
+            "offset": 836
+          }
+        }
+      ]
+    }
+  ],
+  "paths": {
+    "scanned": [
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.asf.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/CONTRIBUTING.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/ISSUE_TEMPLATE/1-bug.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/ISSUE_TEMPLATE/2-feature.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/ISSUE_TEMPLATE/3-techdebt.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/ISSUE_TEMPLATE/config.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/PULL_REQUEST_TEMPLATE.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/workflows/build_wheel.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/workflows/ci.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/workflows/docs.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/workflows/pr_edit_trigger.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/workflows/pr_labeler.js",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/workflows/pr_labeler.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.github/workflows/pr_open_trigger.yml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.gitignore",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.gitmodules",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/.licenserc.yaml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/LICENSE",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/NOTICE",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/AgentBuilder.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/AgentsExecutionEnvironment.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/Event.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/EventContext.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/EventFilter.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/InputEvent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/OutputEvent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/RetryExecutor.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/agents/Agent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/agents/AgentExecutionOptions.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/agents/OutputSchema.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/agents/ReActAgent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/Action.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/ChatModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/ChatModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/EmbeddingModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/EmbeddingModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/MCPServer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/Prompt.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/Tool.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/ToolParam.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/annotation/VectorStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/chat/messages/ChatMessage.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/chat/messages/MessageRole.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/chat/model/BaseChatModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/chat/model/BaseChatModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/chat/model/python/PythonChatModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/chat/model/python/PythonChatModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/configuration/AgentConfigOptions.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/configuration/ConfigOption.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/configuration/Configuration.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/configuration/ReadableConfiguration.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/configuration/WritableConfiguration.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/context/DurableCallable.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/context/MemoryObject.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/context/MemoryRef.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/context/MemoryUpdate.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/context/RunnerContext.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/embedding/model/BaseEmbeddingModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/embedding/model/BaseEmbeddingModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/embedding/model/EmbeddingModelUtils.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/embedding/model/python/PythonEmbeddingModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/embedding/model/python/PythonEmbeddingModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/event/ChatRequestEvent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/event/ChatResponseEvent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/event/ContextRetrievalRequestEvent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/event/ContextRetrievalResponseEvent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/event/ToolRequestEvent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/event/ToolResponseEvent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/listener/EventListener.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/logger/EventLogger.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/logger/EventLoggerConfig.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/logger/EventLoggerFactory.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/logger/EventLoggerOpenParams.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/memory/BaseLongTermMemory.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/memory/LongTermMemoryOptions.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/memory/MemorySet.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/memory/MemorySetItem.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/memory/compaction/CompactionConfig.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/metrics/FlinkAgentsMetricGroup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/metrics/UpdatableGauge.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/prompt/Prompt.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/resource/Resource.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/resource/ResourceDescriptor.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/resource/ResourceName.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/resource/ResourceType.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/resource/SerializableResource.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/resource/python/PythonResourceAdapter.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/resource/python/PythonResourceWrapper.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/tools/FunctionTool.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/tools/Tool.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/tools/ToolMetadata.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/tools/ToolParameters.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/tools/ToolResponse.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/tools/ToolType.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/vectorstores/BaseVectorStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/vectorstores/CollectionManageableVectorStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/vectorstores/Document.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/vectorstores/VectorStoreQuery.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/vectorstores/VectorStoreQueryMode.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/vectorstores/VectorStoreQueryResult.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/vectorstores/python/PythonCollectionManageableVectorStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/api/src/main/java/org/apache/flink/agents/api/vectorstores/python/PythonVectorStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/.gitignore",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/assets/_custom.scss",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/assets/_fonts.scss",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/assets/github.css",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/assets/search-data.js",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/build_docs.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/config.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/chat_models.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/embedding_models.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/integrate_with_flink.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/mcp.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/memory/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/memory/long_term_memory.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/memory/overview.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/memory/sensory_and_short_term_memory.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/prompts.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/react_agent.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/tool_use.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/vector_stores.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/development/workflow_agent.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/faq/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/faq/faq.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/get-started/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/get-started/installation.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/get-started/overview.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/get-started/quickstart/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/get-started/quickstart/react_agent.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/get-started/quickstart/workflow_agent.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/operations/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/operations/configuration.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/operations/deployment.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/docs/operations/monitoring.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content/versions.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content.zh/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content.zh/docs/development/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content.zh/docs/operations/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content.zh/docs/try-flink-agents/_index.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content.zh/docs/try-flink-agents/installation.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/content.zh/versions.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/_default/baseof.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/footer.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/content-before.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/head.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-before.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/interpolate.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/simple-title.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/title.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/toc.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/all_versions.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_gradle.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/beta.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/build_time.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/center.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/check.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/config_file_zh.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/downloads.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/github_repo.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/img.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/include_reporter_config.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/label.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/ref_static.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/stable.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tab.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tabs.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/top.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/unstable.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/version.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/xmark.html",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/setup_hugo.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/favicon.png",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/fig/memory/memory_types.png",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/flink-header-logo.svg",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/font-awesome/css/font-awesome.css",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/font-awesome/css/font-awesome.min.css",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/font-awesome/fonts/FontAwesome.otf",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/font-awesome/fonts/fontawesome-webfont.eot",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/font-awesome/fonts/fontawesome-webfont.svg",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/font-awesome/fonts/fontawesome-webfont.ttf",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/font-awesome/fonts/fontawesome-webfont.woff",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/font-awesome/fonts/fontawesome-webfont.woff2",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/js/flink.js",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/js/track-search-terms.js",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/static/navbar-brand-logo.jpg",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/e2e-test/flink-agents-end-to-end-tests-agent-plan-compatibility/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/e2e-test/flink-agents-end-to-end-tests-integration/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/e2e-test/flink-agents-end-to-end-tests-resource-cross-language/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/e2e-test/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/e2e-test/test-scripts/check_resource_consistency.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/e2e-test/test-scripts/test_agent_plan_compatibility.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/e2e-test/test-scripts/test_java_config_in_python.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/e2e-test/test-scripts/test_resource_cross_language.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/src/main/java/org/apache/flink/agents/examples/ReActAgentExample.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/src/main/java/org/apache/flink/agents/examples/WorkflowMultipleAgentExample.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/src/main/java/org/apache/flink/agents/examples/WorkflowSingleAgentExample.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/src/main/java/org/apache/flink/agents/examples/agents/CustomTypesAndResources.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/src/main/java/org/apache/flink/agents/examples/agents/ProductSuggestionAgent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/src/main/java/org/apache/flink/agents/examples/agents/ReviewAnalysisAgent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/src/main/java/org/apache/flink/agents/examples/agents/TableReviewAnalysisAgent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/src/main/resources/META-INF/NOTICE",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/examples/src/main/resources/input_data.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/ide-support/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/anthropic/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/anthropic/src/main/java/org/apache/flink/agents/integrations/chatmodels/anthropic/AnthropicChatModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/anthropic/src/main/java/org/apache/flink/agents/integrations/chatmodels/anthropic/AnthropicChatModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/azureai/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/azureai/src/main/java/org/apache/flink/agents/integrations/chatmodels/azureai/AzureAIChatModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/azureai/src/main/java/org/apache/flink/agents/integrations/chatmodels/azureai/AzureAIChatModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/bedrock/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/bedrock/src/main/java/org/apache/flink/agents/integrations/chatmodels/bedrock/BedrockChatModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/bedrock/src/main/java/org/apache/flink/agents/integrations/chatmodels/bedrock/BedrockChatModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/ollama/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/ollama/src/main/java/org/apache/flink/agents/integrations/chatmodels/ollama/OllamaChatModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/ollama/src/main/java/org/apache/flink/agents/integrations/chatmodels/ollama/OllamaChatModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/openai/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/openai/src/main/java/org/apache/flink/agents/integrations/chatmodels/openai/OpenAICompletionsConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/openai/src/main/java/org/apache/flink/agents/integrations/chatmodels/openai/OpenAICompletionsSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/openai/src/main/java/org/apache/flink/agents/integrations/chatmodels/openai/OpenAIResponsesModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/openai/src/main/java/org/apache/flink/agents/integrations/chatmodels/openai/OpenAIResponsesModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/chat-models/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/embedding-models/bedrock/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/embedding-models/bedrock/src/main/java/org/apache/flink/agents/integrations/embeddingmodels/bedrock/BedrockEmbeddingModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/embedding-models/bedrock/src/main/java/org/apache/flink/agents/integrations/embeddingmodels/bedrock/BedrockEmbeddingModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/embedding-models/ollama/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/embedding-models/ollama/src/main/java/org/apache/flink/agents/integrations/embeddingmodels/ollama/OllamaEmbeddingModelConnection.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/embedding-models/ollama/src/main/java/org/apache/flink/agents/integrations/embeddingmodels/ollama/OllamaEmbeddingModelSetup.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/embedding-models/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/mcp/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/mcp/src/main/java/org/apache/flink/agents/integrations/mcp/MCPContentExtractor.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/mcp/src/main/java/org/apache/flink/agents/integrations/mcp/MCPPrompt.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/mcp/src/main/java/org/apache/flink/agents/integrations/mcp/MCPServer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/mcp/src/main/java/org/apache/flink/agents/integrations/mcp/MCPTool.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/mcp/src/main/java/org/apache/flink/agents/integrations/mcp/auth/ApiKeyAuth.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/mcp/src/main/java/org/apache/flink/agents/integrations/mcp/auth/Auth.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/mcp/src/main/java/org/apache/flink/agents/integrations/mcp/auth/BasicAuth.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/mcp/src/main/java/org/apache/flink/agents/integrations/mcp/auth/BearerTokenAuth.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/vector-stores/elasticsearch/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/vector-stores/elasticsearch/src/main/java/org/apache/flink/agents/integrations/vectorstores/elasticsearch/ElasticsearchVectorStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/vector-stores/opensearch/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/vector-stores/opensearch/src/main/java/org/apache/flink/agents/integrations/vectorstores/opensearch/OpenSearchVectorStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/vector-stores/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/vector-stores/s3vectors/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/integrations/vector-stores/s3vectors/src/main/java/org/apache/flink/agents/integrations/vectorstores/s3vectors/S3VectorsVectorStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/AgentConfiguration.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/AgentPlan.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/Function.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/JavaFunction.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/PythonFunction.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/actions/Action.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/actions/ChatModelAction.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/actions/ContextRetrievalAction.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/actions/ToolCallAction.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/actions/Utils.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resource/python/PythonMCPPrompt.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resource/python/PythonMCPServer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resource/python/PythonMCPTool.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resource/python/PythonPrompt.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resource/python/PythonTool.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resourceprovider/JavaResourceProvider.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resourceprovider/JavaSerializableResourceProvider.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resourceprovider/PythonResourceProvider.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resourceprovider/PythonSerializableResourceProvider.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resourceprovider/ResourceProvider.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/resourceprovider/SerializableResourceProvider.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/serializer/ActionJsonDeserializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/serializer/ActionJsonSerializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/serializer/AgentPlanJsonDeserializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/serializer/AgentPlanJsonSerializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/serializer/ResourceProviderJsonDeserializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/serializer/ResourceProviderJsonSerializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/tools/FunctionTool.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/tools/SchemaUtils.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/tools/ToolMetadataFactory.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/tools/serializer/FunctionToolJsonDeserializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/tools/serializer/FunctionToolJsonSerializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/plan/src/main/java/org/apache/flink/agents/plan/utils/JsonUtils.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/MANIFEST.in",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/README.md",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/_build_backend/backend.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/agents/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/agents/agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/agents/react_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/agents/types.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/chat_message.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/chat_models/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/chat_models/chat_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/chat_models/java_chat_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/configuration.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/core_options.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/decorators.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/embedding_models/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/embedding_models/embedding_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/embedding_models/java_embedding_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/events/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/events/chat_event.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/events/context_retrieval_event.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/events/event.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/events/tool_event.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/execution_environment.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/memory/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/memory/long_term_memory.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/memory_object.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/memory_reference.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/metric_group.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/prompts/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/prompts/prompt.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/prompts/utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/resource.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/runner_context.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/tools/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/tools/tool.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/tools/utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/vector_stores/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/vector_stores/java_vector_store.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/vector_stores/vector_store.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/version_compatibility.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/built_in_action_async_execution_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/chat_model_integration_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/chat_model_integration_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/e2e_tests_mcp/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/e2e_tests_mcp/mcp_server.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/e2e_tests_mcp/mcp_server_without_prompts.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/e2e_tests_mcp/mcp_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/execute_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/execute_test_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/flink_integration_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/flink_intergration_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/long_term_memory_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/python_event_logging_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/react_agent_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/react_agent_tools.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_integration/workflow_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_resource_cross_language/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_resource_cross_language/chat_model_cross_language_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_resource_cross_language/chat_model_cross_language_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_resource_cross_language/embedding_model_cross_language_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_resource_cross_language/embedding_model_cross_language_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_resource_cross_language/vector_store_cross_language_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/e2e_tests_resource_cross_language/vector_store_cross_language_test.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/execute_test_input/input_data.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/ground_truth/test_execute_async_exception.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/ground_truth/test_execute_basic.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/ground_truth/test_execute_multiple.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/ground_truth/test_execute_with_async.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/ground_truth/test_from_datastream_to_datastream.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/ground_truth/test_from_table_to_table.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/ground_truth/test_workflow.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/input/input_data.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/resources/java_chat_module_input/input_data.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/scripts/ollama_pull_model.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/e2e_tests/test_utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/NOTICE",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/agents/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/agents/custom_types_and_resources.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/agents/product_suggestion_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/agents/review_analysis_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/agents/table_review_analysis_agent.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/react_agent_example.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/resources/product_review.txt",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/workflow_multiple_agent_example.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/quickstart/workflow_single_agent_example.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/rag/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/rag/knowledge_base_setup.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/examples/rag/rag_agent_example.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/anthropic/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/anthropic/anthropic_chat_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/azure/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/azure/azure_openai_chat_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/chat_model_utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/ollama_chat_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/openai/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/openai/openai_chat_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/openai/openai_utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/chat_models/tongyi_chat_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/embedding_models/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/embedding_models/local/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/embedding_models/local/ollama_embedding_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/embedding_models/openai_embedding_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/embedding_models/tongyi_embedding_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/mcp/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/mcp/mcp.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/mcp/utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/vector_stores/chroma/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/integrations/vector_stores/chroma/chroma_vector_store.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/actions/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/actions/action.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/actions/chat_model_action.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/actions/context_retrieval_action.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/actions/tool_call_action.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/actions/utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/agent_plan.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/configuration.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/function.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/resource_provider.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/tools/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/tools/function_tool.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/plan/utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/agent_runner.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/durable_execution.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/flink_memory_object.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/flink_metric_group.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/flink_runner_context.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/java/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/java/java_chat_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/java/java_embedding_model.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/java/java_resource_wrapper.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/java/java_vector_store.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/local_execution_environment.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/local_memory_object.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/local_runner.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/memory/__init__.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/memory/compaction_functions.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/memory/internal_base_long_term_memory.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/memory/vector_store_long_term_memory.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/python_java_utils.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/remote_execution_environment.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/runtime/resource_cache.py",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/jar_manifest.json",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/pyproject.toml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/pom.xml",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/CompileUtils.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/PythonMCPResourceDiscovery.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/ResourceCache.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/actionstate/ActionState.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/actionstate/ActionStateKafkaDeserializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/actionstate/ActionStateKafkaSeder.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/actionstate/ActionStateKafkaSerializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/actionstate/ActionStateKeyPartitioner.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/actionstate/ActionStateStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/actionstate/ActionStateUtil.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/actionstate/CallResult.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/actionstate/KafkaActionStateStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/async/ContinuationActionExecutor.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/async/ContinuationContext.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/common/HashCommon.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/common/MailboxExecutorFacade.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/common/ObjectOpenHashMap.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/context/ActionStatePersister.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/context/JavaRunnerContextImpl.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/context/RunnerContextImpl.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/env/EmbeddedPythonEnvironment.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/env/PythonEnvironmentManager.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/env/RemoteExecutionEnvironment.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/eventlog/EventLogRecord.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/eventlog/EventLogRecordJsonDeserializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/eventlog/EventLogRecordJsonSerializer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/eventlog/FileEventLogger.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/feedback/Checkpoints.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/feedback/FeedbackChannel.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/feedback/FeedbackChannelBroker.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/feedback/FeedbackConsumer.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/feedback/FeedbackKey.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/feedback/FeedbackQueue.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/feedback/LockFreeBatchFeedbackQueue.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/feedback/SubtaskFeedbackKey.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/logger/CheckpointedStreamOperations.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/logger/FeedbackLogger.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/logger/KeyGroupStream.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/logger/KeyGroupStreamFactory.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/logger/Loggers.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/logger/UnboundedFeedbackLogger.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/logger/UnboundedFeedbackLoggerFactory.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/memory/CachedMemoryStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/memory/CompactionFunctions.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/memory/InteranlBaseLongTermMemory.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/memory/MemoryObjectImpl.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/memory/MemorySegmentPool.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/memory/MemoryStore.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/memory/VectorStoreLongTermMemory.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/message/CheckpointMessage.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/message/EventMessage.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/message/Message.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/metrics/BuiltInActionMetrics.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/metrics/BuiltInMetrics.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/metrics/FlinkAgentsMetricGroupImpl.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/metrics/UpdatableGaugeImpl.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/operator/ActionExecutionOperator.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/operator/ActionExecutionOperatorFactory.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/operator/ActionTask.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/operator/JavaActionTask.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/operator/OperatorUtils.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/operator/StateUtils.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/operator/queue/KeySegment.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/operator/queue/SegmentedQueue.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/python/context/PythonRunnerContextImpl.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/python/event/PythonEvent.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/python/operator/PythonActionTask.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/python/operator/PythonGeneratorActionTask.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/python/utils/JavaResourceAdapter.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/python/utils/PythonActionExecutor.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/python/utils/PythonResourceAdapterImpl.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/queue/Lock.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/queue/Locks.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/queue/MpscQueue.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/utils/EventUtil.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java/org/apache/flink/agents/runtime/utils/StateUtil.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java21/org/apache/flink/agents/runtime/async/ContinuationActionExecutor.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/runtime/src/main/java21/org/apache/flink/agents/runtime/async/ContinuationContext.java",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/.rat-excludes",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/build.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/check-license.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/docs.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/e2e.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/lint.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/releasing/create_binary_release.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/releasing/create_release_branch.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/releasing/create_snapshot_branch.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/releasing/create_source_release.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/releasing/deploy_staging_jars.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/releasing/list_contributors.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/releasing/update_branch_version.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/releasing/update_jar_manifest.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/start_ollama_server.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/update_flink_version.sh",
+      "/tmp/semgrep_clones_8jd6v0ny/flink-agents/tools/ut.sh"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 1.0558888912200928,
+    "profiling_times": {
+      "config_time": 2.02970027923584,
+      "core_time": 9.989286184310913,
+      "ignores_time": 0.0015041828155517578,
+      "total_time": 12.04033374786377
+    },
+    "parsing_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 21.026352882385254,
+      "per_file_time": {
+        "mean": 0.013742714302212616,
+        "std_dev": 0.0014102193559780427
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0,
+      "per_file_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.9799529493267135,
+      "rules_selected_ratio": 0.05915972693290228,
+      "rules_matched_ratio": 0.05915972693290228
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 1394173952
+  },
+  "engine_requested": "OSS",
+  "skipped_rules": [],
+  "profiling_results": []
+}

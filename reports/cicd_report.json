@@ -1,0 +1,631 @@
+{
+  "analyzed_at": "2026-04-24T16:17:21.141685+00:00",
+  "org": "apache",
+  "results": [
+    {
+      "repo": "sedona-db",
+      "workflow_count": 11,
+      "workflows_analyzed": [
+        "assign-reviewer-write.yml",
+        "assign-reviewer.yml",
+        "dev.yml",
+        "examples.yml",
+        "packaging.yml",
+        "python-wheels.yml",
+        "python.yml",
+        "r-extended.yml",
+        "r.yml",
+        "rust-gpu.yml",
+        "rust.yml"
+      ],
+      "total_findings": 28,
+      "severity_counts": {
+        "HIGH": 1,
+        "MEDIUM": 6,
+        "LOW": 18,
+        "INFO": 3
+      },
+      "findings": [
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "assign-reviewer-write.yml",
+          "lines": [
+            41,
+            51,
+            77
+          ],
+          "match_count": 3
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "assign-reviewer.yml",
+          "lines": [
+            34,
+            41
+          ],
+          "match_count": 2
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "dev.yml",
+          "lines": [
+            34,
+            38,
+            55
+          ],
+          "match_count": 3
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "examples.yml",
+          "lines": [
+            63,
+            70
+          ],
+          "match_count": 2
+        },
+        {
+          "rule_id": "sudo_usage",
+          "description": "Uso de sudo en workflow",
+          "severity": "LOW",
+          "file": "examples.yml",
+          "lines": [
+            78
+          ],
+          "match_count": 2
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "packaging.yml",
+          "lines": [
+            46,
+            50,
+            82,
+            97,
+            102
+          ],
+          "match_count": 11
+        },
+        {
+          "rule_id": "env_secret_exposure",
+          "description": "Secret asignado a variable de entorno (puede aparecer en logs)",
+          "severity": "MEDIUM",
+          "file": "packaging.yml",
+          "lines": [],
+          "match_count": 1
+        },
+        {
+          "rule_id": "sudo_usage",
+          "description": "Uso de sudo en workflow",
+          "severity": "LOW",
+          "file": "packaging.yml",
+          "lines": [
+            149
+          ],
+          "match_count": 2
+        },
+        {
+          "rule_id": "github_token_exposed",
+          "description": "GITHUB_TOKEN usado con permisos potencialmente amplios",
+          "severity": "INFO",
+          "file": "packaging.yml",
+          "lines": [
+            232
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "python-wheels.yml",
+          "lines": [
+            48,
+            53,
+            60,
+            66,
+            95
+          ],
+          "match_count": 19
+        },
+        {
+          "rule_id": "env_secret_exposure",
+          "description": "Secret asignado a variable de entorno (puede aparecer en logs)",
+          "severity": "MEDIUM",
+          "file": "python-wheels.yml",
+          "lines": [],
+          "match_count": 1
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "python.yml",
+          "lines": [
+            60,
+            64,
+            70,
+            91,
+            112
+          ],
+          "match_count": 5
+        },
+        {
+          "rule_id": "sudo_usage",
+          "description": "Uso de sudo en workflow",
+          "severity": "LOW",
+          "file": "python.yml",
+          "lines": [
+            110
+          ],
+          "match_count": 2
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "r-extended.yml",
+          "lines": [
+            49,
+            50,
+            51,
+            67,
+            73
+          ],
+          "match_count": 5
+        },
+        {
+          "rule_id": "env_secret_exposure",
+          "description": "Secret asignado a variable de entorno (puede aparecer en logs)",
+          "severity": "MEDIUM",
+          "file": "r-extended.yml",
+          "lines": [],
+          "match_count": 1
+        },
+        {
+          "rule_id": "sudo_usage",
+          "description": "Uso de sudo en workflow",
+          "severity": "LOW",
+          "file": "r-extended.yml",
+          "lines": [
+            65
+          ],
+          "match_count": 2
+        },
+        {
+          "rule_id": "github_token_exposed",
+          "description": "GITHUB_TOKEN usado con permisos potencialmente amplios",
+          "severity": "INFO",
+          "file": "r-extended.yml",
+          "lines": [
+            45
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "r.yml",
+          "lines": [
+            38,
+            64,
+            65,
+            94,
+            110
+          ],
+          "match_count": 5
+        },
+        {
+          "rule_id": "env_secret_exposure",
+          "description": "Secret asignado a variable de entorno (puede aparecer en logs)",
+          "severity": "MEDIUM",
+          "file": "r.yml",
+          "lines": [],
+          "match_count": 1
+        },
+        {
+          "rule_id": "curl_pipe_sh",
+          "description": "Descarga y ejecuci\u00f3n directa de script remoto (curl | sh)",
+          "severity": "HIGH",
+          "file": "r.yml",
+          "lines": [
+            41
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "sudo_usage",
+          "description": "Uso de sudo en workflow",
+          "severity": "LOW",
+          "file": "r.yml",
+          "lines": [
+            88
+          ],
+          "match_count": 2
+        },
+        {
+          "rule_id": "github_token_exposed",
+          "description": "GITHUB_TOKEN usado con permisos potencialmente amplios",
+          "severity": "INFO",
+          "file": "r.yml",
+          "lines": [
+            60
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "action_no_version",
+          "description": "Action usada sin versi\u00f3n fija (usa rama flotante como @main o @master)",
+          "severity": "MEDIUM",
+          "file": "rust-gpu.yml",
+          "lines": [
+            112
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "rust-gpu.yml",
+          "lines": [
+            84,
+            89,
+            178,
+            199
+          ],
+          "match_count": 4
+        },
+        {
+          "rule_id": "sudo_usage",
+          "description": "Uso de sudo en workflow",
+          "severity": "LOW",
+          "file": "rust-gpu.yml",
+          "lines": [
+            126,
+            129,
+            132,
+            133,
+            134
+          ],
+          "match_count": 12
+        },
+        {
+          "rule_id": "action_no_version",
+          "description": "Action usada sin versi\u00f3n fija (usa rama flotante como @main o @master)",
+          "severity": "MEDIUM",
+          "file": "rust.yml",
+          "lines": [
+            117
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "rust.yml",
+          "lines": [
+            65,
+            70,
+            91,
+            111
+          ],
+          "match_count": 4
+        },
+        {
+          "rule_id": "sudo_usage",
+          "description": "Uso de sudo en workflow",
+          "severity": "LOW",
+          "file": "rust.yml",
+          "lines": [
+            131
+          ],
+          "match_count": 2
+        }
+      ],
+      "analyzed_at": "2026-04-24T16:17:10.142117+00:00"
+    },
+    {
+      "repo": "tvm-ffi",
+      "workflow_count": 5,
+      "workflows_analyzed": [
+        "ci_mainline_only.yml",
+        "ci_test.yml",
+        "publish_orcjit_wheel.yml",
+        "publish_wheel.yml",
+        "torch_c_dlpack.yml"
+      ],
+      "total_findings": 7,
+      "severity_counts": {
+        "HIGH": 0,
+        "MEDIUM": 1,
+        "LOW": 6,
+        "INFO": 0
+      },
+      "findings": [
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "ci_mainline_only.yml",
+          "lines": [
+            31,
+            47,
+            81,
+            106
+          ],
+          "match_count": 4
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "ci_test.yml",
+          "lines": [
+            40,
+            70,
+            85,
+            108,
+            139
+          ],
+          "match_count": 7
+        },
+        {
+          "rule_id": "sudo_usage",
+          "description": "Uso de sudo en workflow",
+          "severity": "LOW",
+          "file": "ci_test.yml",
+          "lines": [
+            119
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "publish_orcjit_wheel.yml",
+          "lines": [
+            42,
+            54,
+            68,
+            75
+          ],
+          "match_count": 4
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "publish_wheel.yml",
+          "lines": [
+            43,
+            56,
+            62,
+            76,
+            84
+          ],
+          "match_count": 5
+        },
+        {
+          "rule_id": "action_no_version",
+          "description": "Action usada sin versi\u00f3n fija (usa rama flotante como @main o @master)",
+          "severity": "MEDIUM",
+          "file": "torch_c_dlpack.yml",
+          "lines": [
+            36
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "torch_c_dlpack.yml",
+          "lines": [
+            38,
+            65,
+            77,
+            93,
+            105
+          ],
+          "match_count": 10
+        }
+      ],
+      "analyzed_at": "2026-04-24T16:17:13.167725+00:00"
+    },
+    {
+      "repo": "flink-agents",
+      "workflow_count": 6,
+      "workflows_analyzed": [
+        "build_wheel.yml",
+        "ci.yml",
+        "docs.yml",
+        "pr_edit_trigger.yml",
+        "pr_labeler.yml",
+        "pr_open_trigger.yml"
+      ],
+      "total_findings": 6,
+      "severity_counts": {
+        "HIGH": 1,
+        "MEDIUM": 0,
+        "LOW": 4,
+        "INFO": 1
+      },
+      "findings": [
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "build_wheel.yml",
+          "lines": [
+            28,
+            32,
+            37,
+            41,
+            55
+          ],
+          "match_count": 19
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "ci.yml",
+          "lines": [
+            32,
+            36,
+            41,
+            55,
+            57
+          ],
+          "match_count": 19
+        },
+        {
+          "rule_id": "curl_pipe_sh",
+          "description": "Descarga y ejecuci\u00f3n directa de script remoto (curl | sh)",
+          "severity": "HIGH",
+          "file": "ci.yml",
+          "lines": [
+            46,
+            62,
+            93,
+            129,
+            168
+          ],
+          "match_count": 6
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "docs.yml",
+          "lines": [
+            38
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "pr_labeler.yml",
+          "lines": [
+            40,
+            44
+          ],
+          "match_count": 2
+        },
+        {
+          "rule_id": "github_token_exposed",
+          "description": "GITHUB_TOKEN usado con permisos potencialmente amplios",
+          "severity": "INFO",
+          "file": "pr_labeler.yml",
+          "lines": [
+            46
+          ],
+          "match_count": 1
+        }
+      ],
+      "analyzed_at": "2026-04-24T16:17:16.717678+00:00"
+    },
+    {
+      "repo": "arrow-js",
+      "workflow_count": 3,
+      "workflows_analyzed": [
+        "rc.yaml",
+        "release.yaml",
+        "test.yaml"
+      ],
+      "total_findings": 4,
+      "severity_counts": {
+        "HIGH": 0,
+        "MEDIUM": 2,
+        "LOW": 0,
+        "INFO": 2
+      },
+      "findings": [
+        {
+          "rule_id": "env_secret_exposure",
+          "description": "Secret asignado a variable de entorno (puede aparecer en logs)",
+          "severity": "MEDIUM",
+          "file": "rc.yaml",
+          "lines": [],
+          "match_count": 1
+        },
+        {
+          "rule_id": "github_token_exposed",
+          "description": "GITHUB_TOKEN usado con permisos potencialmente amplios",
+          "severity": "INFO",
+          "file": "rc.yaml",
+          "lines": [
+            243
+          ],
+          "match_count": 1
+        },
+        {
+          "rule_id": "env_secret_exposure",
+          "description": "Secret asignado a variable de entorno (puede aparecer en logs)",
+          "severity": "MEDIUM",
+          "file": "release.yaml",
+          "lines": [],
+          "match_count": 1
+        },
+        {
+          "rule_id": "github_token_exposed",
+          "description": "GITHUB_TOKEN usado con permisos potencialmente amplios",
+          "severity": "INFO",
+          "file": "release.yaml",
+          "lines": [
+            31
+          ],
+          "match_count": 1
+        }
+      ],
+      "analyzed_at": "2026-04-24T16:17:20.014069+00:00"
+    },
+    {
+      "repo": "datasketches-rust",
+      "workflow_count": 1,
+      "workflows_analyzed": [
+        "ci.yml"
+      ],
+      "total_findings": 1,
+      "severity_counts": {
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 1,
+        "INFO": 0
+      },
+      "findings": [
+        {
+          "rule_id": "action_no_pin",
+          "description": "Action usada con tag de versi\u00f3n en vez de commit hash (puede ser modificada)",
+          "severity": "LOW",
+          "file": "ci.yml",
+          "lines": [
+            46,
+            51,
+            52,
+            64,
+            80
+          ],
+          "match_count": 7
+        }
+      ],
+      "analyzed_at": "2026-04-24T16:17:21.132772+00:00"
+    }
+  ]
+}

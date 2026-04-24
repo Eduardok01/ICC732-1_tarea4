@@ -1,0 +1,1027 @@
+{
+  "analyzed_at": "2026-04-24T16:16:54.351491+00:00",
+  "total_repos": 5,
+  "results": [
+    {
+      "repo": "sedona-db",
+      "total_findings": 7,
+      "severity_counts": {
+        "ERROR": 2,
+        "WARNING": 5,
+        "INFO": 0
+      },
+      "categories": {
+        "security": 7
+      },
+      "findings": [
+        {
+          "rule_id": "c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/sedona-db/c/sedona-tg/src/tg/tg.c",
+          "line": 11195,
+          "message": "Finding triggers whenever there is a strcpy or strncpy used. This is an issue because strcpy does not affirm the size of the destination array and strncpy will not automatically NULL-terminate strings. This can lead to buffer overflows, which can cause program crashes and potentially let an attacker",
+          "cwe": [
+            "CWE-676: Use of Potentially Dangerous Function"
+          ],
+          "owasp": []
+        },
+        {
+          "rule_id": "c.lang.security.insecure-use-string-copy-fn.insecure-use-string-copy-fn",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/sedona-db/c/sedona-tg/src/tg/tg.c",
+          "line": 11197,
+          "message": "Finding triggers whenever there is a strcpy or strncpy used. This is an issue because strcpy does not affirm the size of the destination array and strncpy will not automatically NULL-terminate strings. This can lead to buffer overflows, which can cause program crashes and potentially let an attacker",
+          "cwe": [
+            "CWE-676: Use of Potentially Dangerous Function"
+          ],
+          "owasp": []
+        },
+        {
+          "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/sedona-db/dev/release/check-rat-report.py",
+          "line": 21,
+          "message": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "owasp": [
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/sedona-db/dev/release/check-rat-report.py",
+          "line": 32,
+          "message": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "owasp": [
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/sedona-db/docs/overrides/partials/header.html",
+          "line": 47,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/sedona-db/docs/overrides/partials/nav.html",
+          "line": 32,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/sedona-db/submodules/download-assets.py",
+          "line": 46,
+          "message": "Detected a dynamic value being used with urllib. urllib supports 'file://' schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib calls to ensure user data cannot control the URLs, or consider using the 'requests' library instead.",
+          "cwe": [
+            "CWE-939: Improper Authorization in Handler for Custom URL Scheme"
+          ],
+          "owasp": "A01:2017 - Injection"
+        }
+      ],
+      "analyzed_at": "2026-04-24T16:15:51.624584+00:00"
+    },
+    {
+      "repo": "tvm-ffi",
+      "total_findings": 11,
+      "severity_counts": {
+        "ERROR": 7,
+        "WARNING": 4,
+        "INFO": 0
+      },
+      "categories": {
+        "security": 11
+      },
+      "findings": [
+        {
+          "rule_id": "yaml.github-actions.security.run-shell-injection.run-shell-injection",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/actions/detect-skip-ci/action.yaml",
+          "line": 45,
+          "message": "Using variable interpolation `${{...}}` with `github` context data in a `run:` step could allow an attacker to inject their own code into the runner. This would allow them to steal secrets and code. `github` context data can have arbitrary user input and should be treated as untrusted. Instead, use ",
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/.github/workflows/utils/locate_vsdevcmd_bat.py",
+          "line": 43,
+          "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/_optional_torch_c_dlpack.py",
+          "line": 158,
+          "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/extension.py",
+          "line": 292,
+          "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/extension.py",
+          "line": 324,
+          "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/cpp/extension.py",
+          "line": 324,
+          "message": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/dataclasses/py_class.py",
+          "line": 490,
+          "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+          "cwe": [
+            "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/error.py",
+          "line": 96,
+          "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+          "cwe": [
+            "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/_build_optional_torch_c_dlpack.py",
+          "line": 631,
+          "message": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+          "cwe": [
+            "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+          ],
+          "owasp": [
+            "A01:2017 - Injection",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.exec-detected.exec-detected",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/kwargs_wrapper.py",
+          "line": 305,
+          "message": "Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+          "cwe": [
+            "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.exec-detected.exec-detected",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/tvm-ffi/python/tvm_ffi/utils/unpack_dataclass.py",
+          "line": 248,
+          "message": "Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+          "cwe": [
+            "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+          ],
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        }
+      ],
+      "analyzed_at": "2026-04-24T16:16:05.745169+00:00"
+    },
+    {
+      "repo": "flink-agents",
+      "total_findings": 37,
+      "severity_counts": {
+        "ERROR": 0,
+        "WARNING": 37,
+        "INFO": 0
+      },
+      "categories": {
+        "security": 37
+      },
+      "findings": [
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/_default/baseof.html",
+          "line": 20,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/_default/baseof.html",
+          "line": 47,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/footer.html",
+          "line": 27,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+          "line": 25,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+          "line": 37,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+          "line": 43,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-after.html",
+          "line": 72,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/inject/menu-before.html",
+          "line": 22,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "line": 35,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "line": 35,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "line": 56,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "line": 56,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu-filetree.html",
+          "line": 62,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu.html",
+          "line": 41,
+          "message": "Detected a segment of a Flask template where autoescaping is explicitly disabled with '| safe' filter. This allows rendering of raw HTML in this segment. Ensure no user data is rendered here, otherwise this is a cross-site scripting (XSS) vulnerability.",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-script-tag.var-in-script-tag",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/menu.html",
+          "line": 41,
+          "message": "Detected a template variable used in a script tag. Although template variables are HTML escaped, HTML escaping does not always prevent cross-site scripting (XSS) attacks when used directly in JavaScript. If you need this data on the rendered page, consider placing it in the HTML portion (outside of ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/title.html",
+          "line": 41,
+          "message": "Detected a segment of a Flask template where autoescaping is explicitly disabled with '| safe' filter. This allows rendering of raw HTML in this segment. Ensure no user data is rendered here, otherwise this is a cross-site scripting (XSS) vulnerability.",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/partials/docs/toc.html",
+          "line": 23,
+          "message": "Detected a segment of a Flask template where autoescaping is explicitly disabled with '| safe' filter. This allows rendering of raw HTML in this segment. Ensure no user data is rendered here, otherwise this is a cross-site scripting (XSS) vulnerability.",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/all_versions.html",
+          "line": 25,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html",
+          "line": 62,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html",
+          "line": 66,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html",
+          "line": 88,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/artifact_tabs.html",
+          "line": 91,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+          "line": 26,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/gh_link.html",
+          "line": 26,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/img.html",
+          "line": 30,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/img.html",
+          "line": 31,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/img.html",
+          "line": 32,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+          "line": 25,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/javadoc.html",
+          "line": 25,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.var-in-href.var-in-href",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+          "line": 43,
+          "message": "Detected a template variable used in an anchor tag with the 'href' attribute. This allows a malicious actor to input the 'javascript:' URI and is subject to cross- site scripting (XSS) attacks. If using Flask, use 'url_for()' to safely generate a URL. If using Django, use the 'url' filter to safely ",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/pythondoc.html",
+          "line": 43,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tabs.html",
+          "line": 33,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tabs.html",
+          "line": 34,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tabs.html",
+          "line": 34,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "generic.html-templates.security.unquoted-attribute-var.unquoted-attribute-var",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/docs/layouts/shortcodes/tabs.html",
+          "line": 37,
+          "message": "Detected a unquoted template variable as an attribute. If unquoted, a malicious actor could inject custom JavaScript handlers. To fix this, add quotes around the template expression, like this: \"{{ expr }}\".",
+          "cwe": [
+            "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+          ],
+          "owasp": [
+            "A07:2017 - Cross-Site Scripting (XSS)",
+            "A03:2021 - Injection",
+            "A05:2025 - Injection"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/_build_backend/backend.py",
+          "line": 163,
+          "message": "Detected a dynamic value being used with urllib. urllib supports 'file://' schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib calls to ensure user data cannot control the URLs, or consider using the 'requests' library instead.",
+          "cwe": [
+            "CWE-939: Improper Authorization in Handler for Custom URL Scheme"
+          ],
+          "owasp": "A01:2017 - Injection"
+        },
+        {
+          "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+          "severity": "WARNING",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/flink-agents/python/flink_agents/api/events/event.py",
+          "line": 75,
+          "message": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+          "cwe": [
+            "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+          ],
+          "owasp": [
+            "A03:2017 - Sensitive Data Exposure",
+            "A02:2021 - Cryptographic Failures",
+            "A04:2025 - Cryptographic Failures"
+          ]
+        }
+      ],
+      "analyzed_at": "2026-04-24T16:16:25.027984+00:00"
+    },
+    {
+      "repo": "arrow-js",
+      "total_findings": 2,
+      "severity_counts": {
+        "ERROR": 2,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "categories": {
+        "security": 2
+      },
+      "findings": [
+        {
+          "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/check_rat_report.py",
+          "line": 23,
+          "message": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "owasp": [
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ]
+        },
+        {
+          "rule_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+          "severity": "ERROR",
+          "category": "security",
+          "file": "",
+          "path": "/tmp/semgrep_clones_8jd6v0ny/arrow-js/dev/release/check_rat_report.py",
+          "line": 35,
+          "message": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "owasp": [
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A02:2025 - Security Misconfiguration"
+          ]
+        }
+      ],
+      "analyzed_at": "2026-04-24T16:16:41.519283+00:00"
+    },
+    {
+      "repo": "datasketches-rust",
+      "total_findings": 0,
+      "severity_counts": {
+        "ERROR": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "categories": {},
+      "findings": [],
+      "analyzed_at": "2026-04-24T16:16:54.345655+00:00"
+    }
+  ]
+}
