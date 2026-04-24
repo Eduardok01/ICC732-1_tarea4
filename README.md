@@ -1,17 +1,22 @@
-# SBOM + Vulnerabilidades
+# Análisis de Seguridad — Organización Apache
+
+Análisis de seguridad de los 5 repositorios más populares de la organización `apache` en GitHub.
+Cubre tres dimensiones: dependencias (SBOM), código fuente (análisis estático) y configuración CI/CD.
 
 ## Estructura del proyecto
 
 ```
 sbom-project/
 ├── scripts/
-│   ├── 01_fetch_repos.py
-│   ├── 02_generate_sboms.py
-│   └── 03_analyze_vulnerabilities.py
+│   ├── 01_fetch_repos.py           # Recupera top 5 repos por estrellas
+│   ├── 02_generate_sboms.py        # Genera SBOMs con Syft
+│   ├── 03_analyze_vulnerabilities.py  # Analiza dependencias con Grype
+│   ├── 04_analyze_code.py          # Análisis estático con Semgrep
+│   └── 05_analyze_cicd.py          # Analiza workflows de GitHub Actions
 ├── notebooks/
-│   └── analysis.ipynb
-├── sboms/
-├── reports/
+│   └── analysis.ipynb              # Análisis cuantitativo y cualitativo
+├── sboms/                          # SBOMs generados (.cdx.json por repo)
+├── reports/                        # Reportes JSON y gráficas
 ├── Dockerfile
 ├── docker-compose.yml
 └── requirements.txt
@@ -31,13 +36,12 @@ docker compose run --rm pipeline
 
 ### 3. Ejecutar el pipeline (dentro del contenedor)
 ```bash
-python scripts/01_fetch_repos.py <ORGANIZACIÓN> --max-repos 50
+python scripts/01_fetch_repos.py apache --top 5
 python scripts/02_generate_sboms.py
 python scripts/03_analyze_vulnerabilities.py
+python scripts/04_analyze_code.py
+python scripts/05_analyze_cicd.py
 ```
-
-Reemplaza `<ORGANIZACIÓN>` por el nombre de la organización en GitHub, por ejemplo `pallets`.  
-Para una prueba rápida usa `--max-repos 1`.
 
 ### 4. Salir del contenedor
 ```bash
